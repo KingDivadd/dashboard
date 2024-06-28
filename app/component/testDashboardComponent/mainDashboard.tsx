@@ -5,6 +5,12 @@ import SideBar from './sideBar'
 import EnergyEfficiencyPage from './energyEfficiencyPage'
 import ComfortAndHealthPage from './comfortAndHealthPage'
 import SustainabilityPage from './sustainabilityPage'
+import EngagementPage from './engagementPage'
+import PerceptionPage from './perceptionPage'
+import BehaviouralPage from './behaviouralPage'
+import UseabilityPage from './useabilityPage'
+
+
 
 const MainDashboard = () => {
     const [showSideBar, setShowSideBar] = useState(false)
@@ -31,13 +37,13 @@ const MainDashboard = () => {
 
                 {selectedPage == 'sustainability' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
-                {selectedPage == 'engagement' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+                {selectedPage == 'engagement' && <EngagementPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
-                {selectedPage == 'useability' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+                {selectedPage == 'useability' && <UseabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
-                {selectedPage == 'perception' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+                {selectedPage == 'perception' && <PerceptionPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
-                {selectedPage == 'behavioural' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+                {selectedPage == 'behavioural' && <BehaviouralPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
             </div>
         </div>
