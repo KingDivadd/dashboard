@@ -22,7 +22,7 @@ const EnergyEfficiencyPage = ({setShowSideBar, showSideBar}:MainDashboardProps) 
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-violet-600">EUI Chart</p>
+                        <p className="text-lg font-semibold text-slate-700">EUI Chart</p>
                         <span className='h-[300px] w-full pb-[5px] '>
                             <EUILineChart />
                         </span>

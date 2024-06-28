@@ -22,13 +22,23 @@ const MainDashboard = () => {
                 </div>
             </div>}
             <div className="w-full h-full flex flex-col items-start justify-start bg-white  ">
+
+                {(selectedPage == 'dashboard' || selectedPage == 'building_performance' || selectedPage == 'building_behaviour' ) && <MainDashboardPage showSideBar={showSideBar} setShowSideBar={setShowSideBar} />}
+
                 {selectedPage === 'energy-efficiency' && <EnergyEfficiencyPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  /> }
 
                 {selectedPage == 'comfort-and-health' && <ComfortAndHealthPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
                 {selectedPage == 'sustainability' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
-                {(selectedPage == 'dashboard' || selectedPage == 'building_performance' || selectedPage == 'building_behaviour' ) && <MainDashboardPage showSideBar={showSideBar} setShowSideBar={setShowSideBar} />}
+                {selectedPage == 'engagement' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'useability' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'perception' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'behavioural' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
             </div>
         </div>
     )

@@ -84,7 +84,7 @@ const EnergyEfficiencyCharts: React.FC = () => {
     return (
         <div className="w-full flex flex-col items-start justif-start gap-[15px]">
             <span className="h-[50px] w-full rounded-[5px] px-[10px] flex flex-row items-center justify-start bg-white">
-                <h2 className="text-violet-700 font-semibold text-lg" >Energy Efficiency Charts</h2>
+                <h2 className="text-slate-700 font-semibold text-lg" >Energy Efficiency Charts</h2>
             </span>
             <div className="w-full h-[300px] bg-white rounded-[5px] p-[5px] ">
                 <ChartComponent 
