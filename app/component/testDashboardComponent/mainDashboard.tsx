@@ -4,6 +4,7 @@ import MainDashboardPage from './mainDashboardPage'
 import SideBar from './sideBar'
 import EnergyEfficiencyPage from './energyEfficiencyPage'
 import ComfortAndHealthPage from './comfortAndHealthPage'
+import SustainabilityPage from './sustainabilityPage'
 
 const MainDashboard = () => {
     const [showSideBar, setShowSideBar] = useState(false)
@@ -24,6 +25,8 @@ const MainDashboard = () => {
                 {selectedPage === 'energy-efficiency' && <EnergyEfficiencyPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  /> }
 
                 {selectedPage == 'comfort-and-health' && <ComfortAndHealthPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'sustainability' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
                 {(selectedPage == 'dashboard' || selectedPage == 'building_performance' || selectedPage == 'building_behaviour' ) && <MainDashboardPage showSideBar={showSideBar} setShowSideBar={setShowSideBar} />}
             </div>
