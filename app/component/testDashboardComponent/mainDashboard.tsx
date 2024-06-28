@@ -6,8 +6,8 @@ import EnergyEfficiencyPage from './energyEfficiencyPage'
 import ComfortAndHealthPage from './comfortAndHealthPage'
 
 const MainDashboard = () => {
-    const [showSideBar, setShowSideBar] = useState(false)
-    const [selectedPage, setSelectedPage] = useState('')        
+    const [showSideBar, setShowSideBar] = useState(true)
+    const [selectedPage, setSelectedPage] = useState('dashboard')        
     
     useEffect(() => {
         console.log(selectedPage)

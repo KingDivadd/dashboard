@@ -1,16 +1,13 @@
 
 'use client'
 import React, {useState, useEffect} from 'react'
+import MainDashboard from "../component/testDashboardComponent/mainDashboard"
 
 const Dashboard = () => {
     const [userRole, setUserRole] = useState('admin')
     return (
         <div className="">
-            {/* {userRole === 'admin' && <AdminDashboard />  } */}
-            {/* {userRole === 'admin' && <SalesDashboard />  } */}
-            {/* {userRole === 'admin' && <OpsDashboard />  } */}
-            {/* {userRole === 'admin' && <CustomerDashboard />  } */}
-            {/* {userRole === 'admin' && <InstallerDashboard />  } */}
+            {userRole === 'admin' && <MainDashboard />  }
 
         </div>
     )
