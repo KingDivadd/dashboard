@@ -12,6 +12,9 @@ import { TbRecycle } from "react-icons/tb";
 import { MdEmojiPeople } from "react-icons/md";
 import { FaHandshakeAngle } from "react-icons/fa6";
 import { MdTouchApp } from "react-icons/md";
+import { MdFeedback } from 'react-icons/md';
+import { MdTrackChanges } from "react-icons/md";
+
 
 const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:ShowSideBarProps) => {
     const [selectedNav, setSelectedNav] = useState('')
@@ -140,14 +143,14 @@ const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:Sh
 
                             <span onClick={()=> selectNavBarItem('perception')} className={activeNavItem == 'perception' ? "active-side-bar-nav-item": "side-bar-nav-item"}>
                                 <span className="w-full flex items-center justify-start gap-3">
-                                    <BiSolidDashboard size={22} />
+                                    <MdFeedback size={19} />
                                     <p className="text-md">Perception KPIs</p>
                                 </span>
                             </span>
 
                             <span onClick={()=> selectNavBarItem('behavioural')} className={activeNavItem == 'behavioral' ? "active-side-bar-nav-item" : "side-bar-nav-item"}>
                                 <span className="w-full flex items-center justify-start gap-3">
-                                    <BiSolidDashboard size={22} />
+                                    <MdTrackChanges size={20} />
                                     <p className="text-md">Behavioral KPIs</p>
                                 </span>
                             </span>
