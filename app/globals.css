@@ -407,15 +407,50 @@
     @apply bg-indigo-600
 }
 
+
+/* the side bar nav */
+
 .side-bar-nav {
+    @apply h-[50px] w-full text-slate-100 flex flex-row items-center justify-start rounded-[2px] px-[10px] cursor-pointer;
+}
+
+.side-bar-nav:hover {
+    @apply bg-indigo-500 text-white;
+}
+
+.active-side-bar-nav {
     @apply h-[50px] w-full text-white flex flex-row items-center justify-start bg-indigo-500 rounded-[2px] px-[10px] relative
 }
 
-.side-bar-nav::before {
+.active-side-bar-nav::before {
     content: '';
     @apply w-[5px] h-full absolute -right-[15px] bg-indigo-500
 }
 
+
+/* for the nav bar items */
+
 .side-bar-nav-item {
+    @apply h-[45px] w-full rounded-[2px] text-slate-100 flex flex-row items-center justify-start gap-3 px-[10px] cursor-pointer;
+}
+
+.side-bar-nav-item:hover {
+    @apply text-white bg-blue-500;
+}
+
+.active-side-bar-nav-item {
     @apply h-[45px] w-full rounded-[2px] bg-blue-500 flex flex-row items-center justify-start gap-3 px-[10px]
+}
+
+.side-bar-nav-logout {
+    @apply h-[50px] w-full text-slate-100 flex flex-row items-center justify-start rounded-[2px] px-[10px] cursor-pointer
+}
+
+.side-bar-nav-logout:hover {
+    @apply h-[50px] w-full text-white flex flex-row items-center justify-start bg-red-500 rounded-[2px] px-[10px] relative
+}
+
+.side-bar-nav-logout:hover:before {
+    content: '';
+    @apply w-[5px] h-full absolute -right-[15px] bg-red-500
 }
