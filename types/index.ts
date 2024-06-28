@@ -295,4 +295,13 @@ export const paymentSection = [
 export interface ShowSideBarProps {
     showSideBar: boolean;
     setShowSideBar: (showSideBar: boolean) => void;
+    selectedPage: string;
+    setSelectedPage: (selectedPage: string) => void;
+    
 }
+
+export interface MainDashboardProps {
+    showSideBar: boolean;
+    setShowSideBar: (showSideBar: boolean) => void;
+}
+

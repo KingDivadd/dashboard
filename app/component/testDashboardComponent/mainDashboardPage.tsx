@@ -7,9 +7,9 @@ import { FaCaretRight } from "react-icons/fa6";
 
 import BuildingPerformanceBarOne from './barCharts'
 import { DoughnutChartThree } from '../donutChart'
-import { ShowSideBarProps } from '@/types';
+import { MainDashboardProps } from '@/types';
 
-const MainDashboardPage = ({showSideBar, setShowSideBar}:ShowSideBarProps) => {
+const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => {
     return (
         <div className="w-full h-full flex flex-col items-start justify-start py-[20px] px-[25px] gap-[20px]">
             {/* Top section */}

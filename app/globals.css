@@ -435,11 +435,11 @@
 }
 
 .side-bar-nav-item:hover {
-    @apply text-white bg-blue-500;
+    @apply text-white bg-indigo-500;
 }
 
 .active-side-bar-nav-item {
-    @apply h-[45px] w-full rounded-[2px] bg-blue-500 flex flex-row items-center justify-start gap-3 px-[10px]
+    @apply h-[45px] w-full rounded-[2px] bg-indigo-500 flex flex-row items-center justify-start gap-3 px-[10px]
 }
 
 .side-bar-nav-logout {
@@ -453,4 +453,18 @@
 .side-bar-nav-logout:hover:before {
     content: '';
     @apply w-[5px] h-full absolute -right-[15px] bg-red-500
+}
+
+.full-right-bar {
+    @apply w-full h-full overflow-y-auto;
+}
+
+.right-bar {
+    width: calc(100% - 300px);
+    height: 100%;
+    @apply overflow-y-auto;
+}
+
+.chart-holder {
+    @apply w-full h-[330px] flex flex-col items-start justify-between bg-white rounded-[5px] p-[10px];
 }
