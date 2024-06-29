@@ -23,7 +23,7 @@ const SustainabilityPage = ({setShowSideBar, showSideBar}:MainDashboardProps) =>
 
                     <div className="chart-holder">
                         <p className="text-lg font-semibold text-violet-600">EUI Chart</p>
-                        <span className='h-[300px] w-full pb-[5px] '>
+                        <span className='h-[300px] w-full pb-[5px]  border border-slate-500 rounded-[5px]'>
                             <EUILineChart />
                         </span>
                     </div>
