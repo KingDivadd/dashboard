@@ -5,7 +5,7 @@ import SideBar from './sideBar'
 import EnergyEfficiencyPage from './energyEfficiencyPage'
 import ComfortAndHealthPage from './comfortAndHealthPage'
 import SustainabilityPage from './sustainabilityPage'
-import EngagementPage from './engagementPage'
+
 import PerceptionPage from './perceptionPage'
 import BehaviouralPage from './behaviouralPage'
 import UseabilityPage from './useabilityPage'
@@ -37,7 +37,6 @@ const MainDashboard = () => {
 
                 {selectedPage == 'sustainability' && <SustainabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
-                {selectedPage == 'engagement' && <EngagementPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
                 {selectedPage == 'useability' && <UseabilityPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
