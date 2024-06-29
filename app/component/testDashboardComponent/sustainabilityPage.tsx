@@ -6,7 +6,7 @@ import { MainDashboardProps } from '../../../types/index'
 
 const SustainabilityPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
     return (
-        <div className={'w-full flex items-start justify-end py-[10px] pb-[20px]  px-[20px] min-h-[100vh] bg-slate-200 overflow-y-auto'}>
+        <div className={'w-full flex items-start justify-end py-[10px] pb-[20px]  px-[10px] min-h-[100vh] bg-slate-200 overflow-y-auto'}>
             <div className={showSideBar ? "right-bar flex" : "full-right-bar flex"}>
 
                 <div className="w-full flex flex-col items-start justify-start gap-[20px] ">
