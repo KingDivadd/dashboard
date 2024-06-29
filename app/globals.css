@@ -400,7 +400,7 @@
 }
 
 .side-bar {
-    @apply h-[40px] w-[40px] absolute top-[10px] -right-[20px] rounded-[100%] bg-indigo-500 cursor-pointer border-[3px] border-white text-white flex items-center justify-center;
+    @apply h-[40px] w-[40px] absolute top-[10px] -right-[5px] rounded-[100%] bg-indigo-500 cursor-pointer border-[3px] border-white text-white flex items-center justify-center;
 }
 
 .side-bar:hover {
@@ -456,15 +456,15 @@
 }
 
 .full-right-bar {
-    @apply w-full h-full overflow-y-auto;
+    @apply w-full h-full overflow-y-auto bg-white rounded-[5px] overflow-y-auto pb-[5px];
 }
 
 .right-bar {
     width: calc(100% - 300px);
     height: 100%;
-    @apply overflow-y-auto;
+    @apply overflow-y-auto bg-white rounded-[5px] overflow-y-auto pb-[5px];
 }
 
 .chart-holder {
-    @apply w-full h-[330px] flex flex-col items-start justify-between bg-white rounded-[5px] p-[10px];
+    @apply w-full h-[330px] flex flex-col items-start justify-between bg-white rounded-[5px] p-[5px] gap-[15px];
 }
