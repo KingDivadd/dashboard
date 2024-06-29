@@ -352,11 +352,11 @@
 /* ----------------------------------------------TEST FIEDS------------------------------------------------------- */
 
 .main-dash-middle-bar {
-    height: calc(100vh - 300px - 45px)
+    height: calc(100vh - 337px - 45px)
 }
 
 .main-dash-bottom-bar {
-    height: 300px
+    height: 330px
 }
 
 .line-1::before {

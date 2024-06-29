@@ -320,21 +320,20 @@ export const CompanyOverOne = ()=>{
                     </span>
                     <span className="@apply w-[75px] h-[37.5px] rounded-b-[75px] border-[4px] border-t-0 border-slate-500 "></span>
                     <span className="w-full h-full absolute flex flex-col items-center justify-center top-0 left-0 ">
-                        <p className="text-sm font-semibold text-slate-500">306.90</p>
-                        <p className="text-[10px] text-slate-500">Lorem, ip.</p>
-                        <p className="text-[10px] text-slate-500">0</p>
+                        <p className="text-sm font-semibold text-slate-700">75%</p>
+                        <p className="text-[10px] text-slate-500">Energy</p>
+                        <p className="text-[10px] text-slate-500">Efficiency</p>
                     </span>
                 </span>
             </span>
 
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-sm font-semibold text-slate-700">A</p>
-                <p className="text-[11px] font-semibold text-slate-700">Change</p>
+                <p className="text-sm font-semibold text-slate-700 text-center">Energy Use Intensity </p>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum dolor amet.</p>
-                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum </p>
-                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center ">Measures total energy consumption</p>
+                <p className="text-[10px] text-slate-700 text-center ">per square foot per year,</p>
+                <p className="text-[10px] text-slate-700 text-center ">indicating energy-saving opportunities.</p>
             </span>
         </div>
     )
@@ -350,19 +349,19 @@ export const CompanyOverTwo = ()=>{
                 
                 <span className="w-[105px] h-[105px] rounded-[100%] flex flex-col justify-center items-center relative ">
                     <DoughnutChart />
-                    <span className="w-[105px] h-[105px] flex items-center justify-center absolute top-0 right-0 ">
+                    <span className="w-[105px] h-[105px] flex flex-col items-center justify-center absolute top-0 right-0 ">
                         <p className="text-lg font-semibold text-slate-700">68%</p>
+                        <p className="text-[9px]  text-slate-700">HVAC</p>
                     </span>
                 </span>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-sm font-semibold text-slate-700">B</p>
-                <p className="text-[11px] font-semibold text-slate-700">Burse</p>
+                <p className="text-sm font-semibold text-slate-700 text-center">Metered System Performance</p>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum dolor amet.</p>
-                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum </p>
-                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center ">Tracks efficiency of systems like</p>
+                <p className="text-[10px] text-slate-700 text-center ">lighting and HVAC, </p>
+                <p className="text-[10px] text-slate-700 text-center ">pinpointing areas for improvement.</p>
             </span>
         </div>
     )
@@ -380,7 +379,7 @@ export const CompanyOverThree = ()=>{
                     <DoughnutChartThree />
                     <span className="w-[105px] h-[105px] flex flex-col items-center justify-center absolute top-0 right-0 ">
                         <p className="text-lg font-semibold text-slate-700">45%</p>
-                        <p className="text-[9px] font-semibold text-slate-700">CO2 Levels</p>
+                        <p className="text-[9px]  text-slate-700">CO2 Levels</p>
                     </span>
                 </span>
             </span>
@@ -550,22 +549,13 @@ export const CompanyOvernow = ()=>{
 
             <span className="w-full h-[60px] flex flex-row items-center justify-center gap-2">
                 <span className="w-1/3 h-full flex flex-col items-center justify-start">
-                    <p className="text-[10px] text-slate-700 text-center">Lorem ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem, ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem, ipsum.</p>
+                    <p className="text-[10px] text-slate-700 text-center">Sustainability Initiatives.</p>
                 </span>
                 <span className="w-1/3 h-full flex flex-col items-center justify-start">
-                    <p className="text-[10px] text-slate-700 text-center">Lorem ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem, ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem, ipsum.</p>
+                    <p className="text-[10px] text-slate-700 text-center">Client Satisfaction.</p>
                 </span>
                 <span className="w-1/3 h-full flex flex-col items-center justify-start">
-                    <p className="text-[10px] text-slate-700 text-center">Lorem ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem, ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem ipsum dolor.</p>
-                    <p className="text-[10px] text-slate-700 text-center">Lorem, ipsum.</p>
+                    <p className="text-[10px] text-slate-700 text-center">Operational Efficiency.</p>
                 </span>
             </span>
         </div>
