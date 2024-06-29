@@ -14,7 +14,7 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
     return (
         <div className="w-full h-full flex flex-col items-start justify-start py-[20px] px-[25px] gap-[20px]">
             {/* Top section */}
-            <div className="w-full h-[40px] flex flex-row items-center justify-between gap-[10px] ">
+            <div className="w-full h-[40px] flex flex-row items-center justify-between gap-[10px]  ">
                 <div className="h-full w-[40px] flex items-center justify-center rounded-[5px] bg-slate-500 text-slate-100 cursor-pointer hover:bg-slate-600 hover:text-slate-200 " onClick={()=> setShowSideBar(true)} >
                     <FaCaretRight size={25}  />
                 </div>
@@ -37,8 +37,9 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
                 </div>
                 
             </div>
+
             {/* Middle section */}
-            <div className="w-full main-dash-middle-bar flex flex-row items-center justify-start  gap-[3px] ">
+            <div className="w-full main-dash-middle-bar flex flex-row items-center justify-start  gap-[3px]  ">
 
                 <div className="w-[30%] h-full flex flex-col items-start justify-between rounded-[5px] building-performance-one">
                     <div className="w-[95%] h-[40px] border-b border-slate-100 flex flex-row items-center justify-start mx-auto">
@@ -123,8 +124,10 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
                     </span>
                 </div>
             </div>
+
+
             {/* Bottom section */}
-            <div className="w-full main-dash-bottom-bar flex flex-row items-start justify-between gap-[50] rounded-[5px] ">
+            <div className="w-full main-dash-bottom-bar flex flex-row items-start justify-between gap-[50] rounded-[5px]  ">
                 {/* the left side */}
                 <div className="flex-1 h-full flex flex-col items-start justify-start  gap-[30px] ">
                     <p className="text-[16px] font-semibold text-black">Company Over</p>

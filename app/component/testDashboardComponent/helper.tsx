@@ -332,8 +332,7 @@ export const CompanyOverOne = ()=>{
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
                 <p className="text-[10px] text-slate-700 text-center ">Measures total energy consumption</p>
-                <p className="text-[10px] text-slate-700 text-center ">per square foot per year,</p>
-                <p className="text-[10px] text-slate-700 text-center ">indicating energy-saving opportunities.</p>
+                <p className="text-[10px] text-slate-700 text-center ">per square foot per year.</p>
             </span>
         </div>
     )
