@@ -1,13 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 
-import {BuilddMoangcailiy, HirinaOpers, Nomiumes, Ooplounrnce, DciltHiopers,  Vorslatility, Empty, End, Adaa,BarColumnOne, BarColumnTwo, BarColumnThree, BarColumnFour, BarColumnFive, BuildingPerformanceBottomLeftOne, BuildingPerformanceBottomLeftTwo, BuildingPerformanceBottomLeftThree, BuildingPerformanceBottomLeftFour, BuildingPerformanceCenterBottomLeftOne, CompanyOverOne, CompanyOverSix, CompanyOvernow, CompanyOverFive, CompanyOverFour, CompanyOverThree, CompanyOverTwo} from './helper'
+import {BuilddMoangcailiy, HirinaOpers, Nomiumes, Ooplounrnce, DciltHiopers,  Vorslatility, Empty, End, Adaa,BarColumnOne, BarColumnTwo, BarColumnThree, BarColumnFour, BarColumnFive, BuildingPerformanceBottomLeftOne, BuildingPerformanceBottomLeftTwo, BuildingPerformanceBottomLeftThree, BuildingPerformanceBottomLeftFour, BuildingPerformanceCenterBottomLeftOne, CompanyOverOne, CompanyOverSix, CompanyOvernow, CompanyOverFive, CompanyOverFour, CompanyOverThree, CompanyOverTwo, BuildingPerformanceCenterBottomLeftTwo, BuildingPerformanceCenterBottomLeftThree, BuildingPerformanceCenterBottomLeftFour} from './helper'
 import  {BuildingBehaviourLineChartOne, BuildingBehaviourLineChartTwo} from './charts'
 import { FaCaretRight } from "react-icons/fa6";
 
 import BuildingPerformanceBarOne from './barCharts'
 import { DoughnutChartThree } from '../donutChart'
 import { MainDashboardProps } from '@/types';
+
 
 const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => {
     return (
@@ -84,11 +85,9 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
                     <div className="w-full h-[55px] bg-gradient-to-r from-gray-400 via-slate-400 to-slate-500 flex flex-row items-center justify-center rounded-b-[5px] gap-4 py-[5px] px-[10px]">
                         <span className="w-full h-full flex flex-row items-center justify-between gap-2">
                             <BuildingPerformanceCenterBottomLeftOne />
-                            <BuildingPerformanceCenterBottomLeftOne />
-                            <BuildingPerformanceCenterBottomLeftOne />
-                            <BuildingPerformanceCenterBottomLeftOne />
-                            <BuildingPerformanceCenterBottomLeftOne />
-                            <BuildingPerformanceCenterBottomLeftOne />
+                            <BuildingPerformanceCenterBottomLeftTwo />
+                            <BuildingPerformanceCenterBottomLeftThree />
+                            <BuildingPerformanceCenterBottomLeftFour />
                         </span>
                         {/* <BuildingPerformanceCenterBottomLeftOne /> */}
                     </div>

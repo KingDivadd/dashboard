@@ -1,17 +1,24 @@
 'use client'
 import React from 'react'
-import { TbTemperature } from "react-icons/tb";
-import { MdOutlineLightbulbCircle } from "react-icons/md";
-import { GiPearlEarring } from "react-icons/gi";
-import { CiCircleMinus } from "react-icons/ci";
-import { GiRoundShield } from "react-icons/gi";
-import { FaGgCircle } from "react-icons/fa6";
 import { TbBeta } from "react-icons/tb";
 import { PiNumberZeroBold } from "react-icons/pi";
 import { FaBoxArchive } from "react-icons/fa6";
 import { TiSocialFlickrCircular } from "react-icons/ti";
 import { MdOutlineBlurCircular } from "react-icons/md";
 import DoughnutChart, { DoughnutChartThree, DoughnutChartFour, DoughnutChartFive, DoughnutChartSix, DoughnutChartSeven, DoughnutChartEight } from '../donutChart';
+import { FaLeaf } from "react-icons/fa6";
+import { TbGaugeFilled } from "react-icons/tb";
+import { FaLightbulb } from "react-icons/fa6";
+import { RiWaterFlashFill } from "react-icons/ri";
+import { ImBin2 } from "react-icons/im";
+import { GiWindSlap } from "react-icons/gi";
+import { SlEmotsmile } from "react-icons/sl";
+import { FaHandshakeAngle } from "react-icons/fa6";
+import { IoNavigateCircle } from "react-icons/io5";
+import { IoMdLock } from "react-icons/io";
+import { MdOutlineSpeed } from "react-icons/md";
+import { IoLeaf } from "react-icons/io5";
+import { FiBarChart } from "react-icons/fi";
 
 export const Adaa = ()=>{
 
@@ -201,10 +208,10 @@ export const BarColumnFive = ()=>{
 export const BuildingPerformanceBottomLeftOne = ()=>{
 
     return (
-        <div className="w-[30%] h-full flex flex-col items-start justify-center">
-            <p className="text-[10px] text-white">Lorem, ipsum dolor!</p>
-            <p className="text-[11px] text-white">lorem</p>
-            <p className="text-[10px] text-white">Lorem, ipsum dolor.</p>
+        <div className="w-[44%] h-full flex flex-col items-start justify-center ">
+            <p className="text-[10px] text-white">Energy Use Intensity (EUI)</p>
+            <p className="text-[11px] text-white">Metered System Performance</p>
+            <p className="text-[10px] text-white">Indoor Air Quality (IAQ)</p>
         </div>
     )
 }
@@ -212,8 +219,8 @@ export const BuildingPerformanceBottomLeftOne = ()=>{
 export const BuildingPerformanceBottomLeftTwo = ()=>{
 
     return (
-        <div className="w-[20%] h-full flex flex-row items-center justify-center">
-            <TbTemperature size={25} className='text-slate-100' />
+        <div className="w-[13%] h-full flex flex-row items-center justify-center ">
+            <TbGaugeFilled size={23} className='text-slate-100' />
             <p className="text-slate-100 text-[11px] ">10f</p>
         </div>
     )
@@ -223,10 +230,10 @@ export const BuildingPerformanceBottomLeftTwo = ()=>{
 export const BuildingPerformanceBottomLeftThree = ()=>{
     
     return (
-        <div className="w-[30%] h-full flex flex-col items-start justify-center">
-            <p className="text-[10px] text-white">Lorem, ipsum dolor.</p>
-            <p className="text-[11px] text-white">lorem</p>
-            <p className="text-[10px] text-white">Lorem, ipsum dolor.</p>
+        <div className="w-[30%] h-full flex flex-col items-start justify-center ">
+            <p className="text-[10px] text-white">Lighting Levels.</p>
+            <p className="text-[11px] text-white">Water Use Intensity</p>
+            <p className="text-[10px] text-white">Waste Management.</p>
         </div>
     )
 }
@@ -234,8 +241,8 @@ export const BuildingPerformanceBottomLeftThree = ()=>{
 export const BuildingPerformanceBottomLeftFour = ()=>{
 
     return (
-        <div className="w-[20%] h-full flex flex-row items-center justify-start gap-1">
-            <MdOutlineLightbulbCircle className='text-slate-100' size={25} />
+        <div className="w-[13%] h-full flex flex-row items-center justify-start gap-1 ">
+            <FaLeaf className='text-slate-100' size={25} />
             <p className="text-[11px] text-slate-100">327</p>
         </div>
     )
@@ -245,12 +252,56 @@ export const BuildingPerformanceCenterBottomLeftOne = ()=>{
 
     return (
         <div className="h-full flex flex-row items-center justify-start gap-1">
-            <FaGgCircle size={21}className='text-slate-100' />
-            <GiPearlEarring size={23}className='text-slate-100' />
-            <GiRoundShield size={24}className='text-slate-100' />
+            <FaLightbulb size={20}className='text-slate-100' />
+            <RiWaterFlashFill size={22}className='text-slate-100' />
+            <ImBin2 size={22}className='text-slate-100' />
             <span className="h-full flex flex-col items-start justify-center">
-                <p className="text-slate-100 text-[9px] h-[9px] ">lorem</p>
-                <p className="text-slate-100 text-[9px] h-[9px] ">maden</p>
+                <p className="text-slate-100 text-[9px] h-[9px] ">Energy Efficiency</p>
+                <p className="text-slate-100 text-[9px] h-[9px] ">Water Conservation</p>
+            </span>
+        </div>
+    )
+}
+export const BuildingPerformanceCenterBottomLeftTwo = ()=>{
+
+    return (
+        <div className="h-full flex flex-row items-center justify-start gap-1">
+            <GiWindSlap size={20}className='text-slate-100' />
+            <FaLightbulb size={21}className='text-slate-100' />
+            <SlEmotsmile size={20}className='text-slate-100' />
+            <span className="h-full flex flex-col items-start justify-center">
+                <p className="text-slate-100 text-[9px] h-[9px] ">Air Quality</p>
+                <p className="text-slate-100 text-[9px] h-[9px] ">Occupant Comfort</p>
+            </span>
+        </div>
+    )
+}
+
+export const BuildingPerformanceCenterBottomLeftThree = ()=>{
+
+    return (
+        <div className="h-full flex flex-row items-center justify-start gap-1">
+            <FaHandshakeAngle size={20}className='text-slate-100' />
+            <IoNavigateCircle size={21}className='text-slate-100' />
+            <IoMdLock size={20}className='text-slate-100' />
+            <span className="h-full flex flex-col items-start justify-center">
+                <p className="text-slate-100 text-[9px] h-[9px] ">Collaboration Spaces</p>
+                <p className="text-slate-100 text-[9px] h-[9px] ">Safety and Security</p>
+            </span>
+        </div>
+    )
+}
+
+export const BuildingPerformanceCenterBottomLeftFour = ()=>{
+
+    return (
+        <div className="h-full flex flex-row items-center justify-start gap-1">
+            <MdOutlineSpeed size={20}className='text-slate-100' />
+            <IoLeaf size={21}className='text-slate-100' />
+            <FiBarChart size={20}className='text-slate-100' />
+            <span className="h-full flex flex-col items-start justify-center">
+                <p className="text-slate-100 text-[9px] h-[9px] ">Efficiency</p>
+                <p className="text-slate-100 text-[9px] h-[9px] ">Productivity</p>
             </span>
         </div>
     )
