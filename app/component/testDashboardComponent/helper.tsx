@@ -17,7 +17,7 @@ export const Adaa = ()=>{
 
     return (
         <div className="w-[100px] h-full flex flex-col justify-between items-start">
-            <p className="text-xl font-bold text-slate-600">ADAAA</p>
+            <p className="text-xl font-bold text-slate-600">ADAA</p>
             <span className="w-[90%] h-[4px] flex items-start justify-start bg-slate-200">
                 <span className="w-[80%] h-full bg-sky-300"></span>
             </span>
@@ -28,8 +28,8 @@ export const Adaa = ()=>{
 export const HirinaOpers = ()=>{
 
     return (
-        <div className="w-[100px] h-full flex flex-col justify-between items-start">
-            <p className="text-sm font-semibold text-slate-600">Hirina Opers</p>
+        <div className="w-[130px] h-full flex flex-col justify-between items-start">
+            <p className="text-sm font-semibold text-slate-600">Energy Efficiency</p>
             <span className="w-[90%] h-[4px] flex items-start justify-start bg-slate-200">
                 <span className="w-[80%] h-full bg-slate-400"></span>
             </span>
@@ -40,8 +40,8 @@ export const HirinaOpers = ()=>{
 export const Ooplounrnce = ()=>{
 
     return (
-        <div className="w-[100px] h-full flex flex-col justify-between items-start ">
-            <p className="text-sm font-semibold text-slate-600">Ooplounrnce</p>
+        <div className="w-[150px] h-full flex flex-col justify-between items-start ">
+            <p className="text-sm font-semibold text-slate-600">Energy Use Intensity</p>
             <span className="w-[80%] h-[4px] flex items-start justify-start bg-slate-200">
                 <span className="w-[60%] h-full bg-slate-400"></span>
             </span>
@@ -52,8 +52,8 @@ export const Ooplounrnce = ()=>{
 export const Nomiumes = ()=>{
 
     return (
-        <div className="w-[90px] h-full flex flex-col justify-between items-start">
-            <p className="text-sm font-semibold text-slate-600">Nomiumes</p>
+        <div className="w-[160px] h-full flex flex-col justify-between items-start ">
+            <p className="text-sm font-semibold text-slate-600">System Performance</p>
             <span className="w-[65%] mx-auto h-[4px] flex items-start justify-end bg-slate-200">
                 <span className="w-[60%] h-full bg-slate-400"></span>
             </span>
@@ -65,7 +65,7 @@ export const BuilddMoangcailiy = ()=>{
 
     return (
         <div className="w-[130px] h-full flex flex-col justify-between items-start">
-            <p className="text-sm font-semibold text-slate-600">Build Moangcailiy</p>
+            <p className="text-sm font-semibold text-slate-600">Indoor Air Quality </p>
             <span className="w-full h-[4px] flex items-start justify-start bg-slate-200">
                 <span className="w-[60%] h-full bg-sky-500"></span>
             </span>
@@ -76,22 +76,10 @@ export const BuilddMoangcailiy = ()=>{
 export const DciltHiopers = ()=>{
 
     return (
-        <div className="w-[100px] h-full flex flex-col justify-between items-start">
-            <p className="text-sm font-semibold text-slate-600">Dcilt Hiopers</p>
+        <div className="w-[120px] h-full flex flex-col justify-between items-start">
+            <p className="text-sm font-semibold text-slate-600">Lighting Levels</p>
             <span className="w-[80%] h-[4px] flex items-start justify-start bg-slate-200">
                 <span className="w-[70%] h-full bg-slate-400"></span>
-            </span>
-        </div>
-    )
-}
-
-export const Yop = ()=>{
-
-    return (
-        <div className="w-[60px] h-full flex flex-col justify-between items-start">
-            <p className="text-sm font-semibold text-slate-600">Yop</p>
-            <span className="w-[80%] h-[4px] flex items-start justify-start bg-slate-200">
-                <span className="w-[100%] h-full bg-slate-400"></span>
             </span>
         </div>
     )
@@ -100,10 +88,10 @@ export const Yop = ()=>{
 export const Vorslatility = ()=>{
 
     return (
-        <div className="w-[110px] h-full flex flex-col justify-between items-start">
-            <p className="text-sm font-semibold text-slate-600">Vorslatility</p>
+        <div className="w-[210px] h-full flex flex-col justify-between items-start ">
+            <p className="text-sm font-semibold text-slate-600">Occupant Comfort & Health</p>
             <span className="w-[100%] h-[4px] flex items-start justify-start bg-slate-200">
-                <span className="w-[60%] h-full bg-slate-400"></span>
+                <span className="w-[70%] h-full bg-slate-400"></span>
             </span>
         </div>
     )
@@ -124,8 +112,8 @@ export const Empty = ()=>{
 export const End = ()=>{
 
     return (
-        <div className="w-[150px] h-full flex flex-col justify-between items-start">
-            <button className="h-[25px] w-full rounded-[30px] text-[12px] bg-slate-600 text-white ">click and click</button>
+        <div className="w-[130px] h-full flex flex-col justify-between items-start">
+            <button className="h-[25px] w-full rounded-[30px] text-[12px] bg-slate-600 text-white hover:bg-slate-500 ">Generate Report</button>
             <span className="w-[70%] h-[4px] flex items-start justify-start bg-slate-200">
                 <span className="w-[40%] h-full bg-slate-400"></span>
             </span>

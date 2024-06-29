@@ -18,7 +18,7 @@ const PerceptionPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
                         </div>}
 
                         <span className="w-full  h-[50px] rounded-[5px]  flex items-center justify-start">
-                            <p className="text-xl font-semibold text-violet-800">Perception KPI</p>
+                            <p className="text-xl font-semibold text-violet-800">Perception</p>
                         </span>
                     </div>
 

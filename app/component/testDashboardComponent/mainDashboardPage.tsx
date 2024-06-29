@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import {BuilddMoangcailiy, HirinaOpers, Nomiumes, Ooplounrnce, DciltHiopers, Yop, Vorslatility, Empty, End, Adaa,BarColumnOne, BarColumnTwo, BarColumnThree, BarColumnFour, BarColumnFive, BuildingPerformanceBottomLeftOne, BuildingPerformanceBottomLeftTwo, BuildingPerformanceBottomLeftThree, BuildingPerformanceBottomLeftFour, BuildingPerformanceCenterBottomLeftOne, CompanyOverOne, CompanyOverSix, CompanyOvernow, CompanyOverFive, CompanyOverFour, CompanyOverThree, CompanyOverTwo} from './helper'
+import {BuilddMoangcailiy, HirinaOpers, Nomiumes, Ooplounrnce, DciltHiopers,  Vorslatility, Empty, End, Adaa,BarColumnOne, BarColumnTwo, BarColumnThree, BarColumnFour, BarColumnFive, BuildingPerformanceBottomLeftOne, BuildingPerformanceBottomLeftTwo, BuildingPerformanceBottomLeftThree, BuildingPerformanceBottomLeftFour, BuildingPerformanceCenterBottomLeftOne, CompanyOverOne, CompanyOverSix, CompanyOvernow, CompanyOverFive, CompanyOverFour, CompanyOverThree, CompanyOverTwo} from './helper'
 import  {BuildingBehaviourLineChartOne, BuildingBehaviourLineChartTwo} from './charts'
 import { FaCaretRight } from "react-icons/fa6";
 
@@ -20,19 +20,18 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
                 <div className="h-full flex">
                     <Adaa />
                 </div>
-                <div className=" h-full flex flex-row items-center justify-start gap-[30px]">
+                <div className=" h-full flex flex-row items-center justify-start gap-[20px]">
                     <HirinaOpers />
                     <Ooplounrnce />
                 </div>
-                <div className=" h-full flex flex-row items-center justify-start gap-[30px]">
+                <div className=" h-full flex flex-row items-center justify-start gap-[20px]">
                     <Nomiumes />
                     <BuilddMoangcailiy />
                     <DciltHiopers />
                 </div>
-                <div className=" h-full flex flex-row items-center justify-start  gap-[30px]">
-                    <Yop />
+                <div className=" h-full flex flex-row items-center justify-start  gap-[20px]">
+                    
                     <Vorslatility />
-                    <Empty />
                     <End />
                 </div>
                 
