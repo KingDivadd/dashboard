@@ -332,9 +332,9 @@ export const CompanyOverOne = ()=>{
                 <p className="text-[11px] font-semibold text-slate-700">Change</p>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum </p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum </p>
+                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum dolor amet.</p>
             </span>
         </div>
     )
@@ -351,7 +351,7 @@ export const CompanyOverTwo = ()=>{
                 <span className="w-[105px] h-[105px] rounded-[100%] flex flex-col justify-center items-center relative ">
                     <DoughnutChart />
                     <span className="w-[105px] h-[105px] flex items-center justify-center absolute top-0 right-0 ">
-                        <p className="text-lg font-semibold text-slate-700">44</p>
+                        <p className="text-lg font-semibold text-slate-700">68%</p>
                     </span>
                 </span>
             </span>
@@ -360,9 +360,9 @@ export const CompanyOverTwo = ()=>{
                 <p className="text-[11px] font-semibold text-slate-700">Burse</p>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum </p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum </p>
+                <p className="text-[10px] text-slate-700 text-center ">Lorem ipsum dolor amet.</p>
             </span>
         </div>
     )
@@ -378,19 +378,19 @@ export const CompanyOverThree = ()=>{
                 
                 <span className="w-[105px] h-[105px] rounded-[100%] flex flex-col justify-center items-center relative border-[3px] border-slate-500 p-[1.5px] ">
                     <DoughnutChartThree />
-                    <span className="w-[105px] h-[105px] flex items-center justify-center absolute top-0 right-0 ">
-                        <p className="text-lg font-semibold text-slate-700">226</p>
+                    <span className="w-[105px] h-[105px] flex flex-col items-center justify-center absolute top-0 right-0 ">
+                        <p className="text-lg font-semibold text-slate-700">45%</p>
+                        <p className="text-[9px] font-semibold text-slate-700">CO2 Levels</p>
                     </span>
                 </span>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-sm font-semibold text-slate-700">Bor</p>
-                <p className="text-[11px] font-semibold text-slate-700">Bored</p>
+                <p className="text-sm font-semibold text-slate-700">Indoor Air Quality (IAQ)</p>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum </p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center "> Monitors CO2 levels, temperature,</p>
+                <p className="text-[10px] text-slate-700 text-center ">humidity, and particulate </p>
+                <p className="text-[10px] text-slate-700 text-center ">matter to ensure a healthy environment.</p>
             </span>
         </div>
     )
@@ -409,20 +409,20 @@ export const CompanyOverFour = ()=>{
                     <span className="w-[105px] h-[105px] flex items-center justify-center absolute top-0 right-0 ">
                         <span className="w-[100px] mx-auto h-[1px] absolute top-[50%] border-b-[2px] border-slate-700 "></span>
                         <span className="flex flex-col items-center justify-center bg-white px-[3px] z-10">
-                            <p className="text-md font-semibold text-slate-700">20K, 32F</p>
-                            <p className="text-[9px] ">Lorem, ipsum </p>
+                            <p className="text-md font-semibold text-slate-700">80%</p>
+                            <p className="text-[9px] ">Lighting </p>
+                            <p className="text-[9px] ">Adequacy </p>
                         </span>
                     </span>
                 </span>
             </span>
-            <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-sm font-semibold text-slate-700"><TbBeta className='text-slate-700 font-semibold' size={19} /></p>
-                <p className="text-[11px] font-semibold text-slate-700">Change</p>
+            <span className="w-full h-[60px] flex flex-col items-center justify-center bg-transparent ">
+                <p className="text-sm font-semibold text-slate-700">Lighting Levels</p>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum </p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center "> Ensures adequate and well-distributed</p>
+                <p className="text-[10px] text-slate-700 text-center ">lighting for occupant </p>
+                <p className="text-[10px] text-slate-700 text-center ">comfort and productivity</p>
             </span>
         </div>
     )
@@ -444,13 +444,12 @@ export const CompanyOverFive = ()=>{
                 </span>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-sm font-semibold text-slate-700"><PiNumberZeroBold size={18} className='text-slate-700' /></p>
-                <p className="text-[11px] font-semibold text-slate-700">Term</p>
+                <p className="text-sm font-semibold text-slate-700 text-center">Water Use Intensity</p>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum </p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center "> Measures water consumption per </p>
+                <p className="text-[10px] text-slate-700 text-center ">square foot per year to  </p>
+                <p className="text-[10px] text-slate-700 text-center">identify leaks and Conservation Oppotunities</p>
             </span>
         </div>
     )
@@ -466,18 +465,18 @@ export const CompanyOverSix = ()=>{
                 <span className="w-[105px] h-[105px] rounded-[100%] flex flex-col justify-center items-center relative bg-[#475569] p-[2px] ">
                     <DoughnutChartSix />
                     <span className="w-[105px] h-[105px] flex items-center justify-center absolute top-0 right-0 ">
-                        <p className="text-lg font-semibold text-white">325</p>
+                        <p className="text-lg font-semibold text-white">70%</p>
                     </span>
                 </span>
             </span>
             <span className="w-full h-[50px] flex flex-col items-center justify-center ">
-                <p className="text-sm font-semibold text-slate-700">Burblug Rudekts</p>
-                <p className="text-[11px] font-semibold text-slate-700">eFunc</p>
+                <p className="text-sm font-semibold text-slate-700">Waste Management</p>
+                <p className="text-[11px] font-semibold text-slate-700"></p>
             </span>
             <span className="w-full h-[60px] flex flex-col items-center justify-center ">
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum </p>
-                <p className="text-[10px] text-slate-700 ">Lorem ipsum dolor amet.</p>
+                <p className="text-[10px] text-slate-700 text-center ">Tracks waste diversion rates,</p>
+                <p className="text-[10px] text-slate-700 text-center ">monitoring progress </p>
+                <p className="text-[10px] text-slate-700 text-center ">towards sustainability goals.</p>
             </span>
         </div>
     )

@@ -93,18 +93,21 @@ export const DoughnutChartThree: React.FC = () => {
                         'Suspension Inspection and replacement',
                     ],
                     datasets: [{
-                        data: [65, 35],
+                        data: [15, 15, 50, 20],
                         backgroundColor: [
-                            '#6B7280',
+                            '#475569',
+                            '#475569',
                             '#E5E7EB',
+                            '#475569',
                         ],
+                        borderWidth: 0, // Remove the border
                         hoverOffset: 4
                     }]
                 }}
-
                 options={{
                     maintainAspectRatio: false, // Set to false to prevent maintaining aspect ratio
-                    cutout: '75%', // Adjust this value to reduce the hole in the middle
+                    cutout: '80%', // Adjust this value to reduce the hole in the middle
+                    rotation: Math.PI / 2, // Adjust rotation to start at 3 o'clock (90 degrees)
                     plugins: {
                         legend: {
                             display: false, // Hide the legend
@@ -148,15 +151,17 @@ export const DoughnutChartFour: React.FC = () => {
                         'Suspension Inspection and replacement',
                     ],
                     datasets: [{
-                        data: [30, 70],
+                        data: [10, 35, 20, 35],
                         backgroundColor: [
+                            '#6B7280',
+                            '#6B7280',
                             '#FFFFFF',
                             '#6B7280',
                         ],
+                        borderWidth: 0, // Remove the border
                         hoverOffset: 4
                     }]
                 }}
-
                 options={{
                     maintainAspectRatio: false, // Set to false to prevent maintaining aspect ratio
                     cutout: '90%', // Adjust this value to reduce the hole in the middle
@@ -204,17 +209,20 @@ export const DoughnutChartFive: React.FC = () => {
                         'Suspension Inspection and replacement',
                     ],
                     datasets: [{
-                        data: [100],
+                        data: [10, 25, 40, 25],
                         backgroundColor: [
-                            '#FEE2E2',
+                            '#007bff',
+                            '#007bff',
+                            '#FFFFFF',
+                            '#007bff',
                         ],
+                        borderWidth: 0, // Remove the border
                         hoverOffset: 4
                     }]
                 }}
-
                 options={{
                     maintainAspectRatio: false, // Set to false to prevent maintaining aspect ratio
-                    cutout: '75%', // Adjust this value to reduce the hole in the middle
+                    cutout: '80%', // Adjust this value to reduce the hole in the middle
                     rotation: Math.PI / 2, // Adjust rotation to start at 3 o'clock (90 degrees)
                     plugins: {
                         legend: {

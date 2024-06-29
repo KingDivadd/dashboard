@@ -83,7 +83,7 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
                         </div>
                     </div>
                     <div className="w-full h-[55px] bg-gradient-to-r from-gray-400 via-slate-400 to-slate-500 flex flex-row items-center justify-center rounded-b-[5px] gap-4 py-[5px] px-[10px]">
-                        <span className="w-full h-full flex flex-row items-center justify-between gap-2">
+                        <span className="w-full h-full flex flex-row items-center justify-between gap-1">
                             <BuildingPerformanceCenterBottomLeftOne />
                             <BuildingPerformanceCenterBottomLeftTwo />
                             <BuildingPerformanceCenterBottomLeftThree />
@@ -104,8 +104,8 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
                         </span>
                     </span>
 
-                    <span className="w-[94%] mx-auto h-[25px] flex items-center justify-start">
-                        <p className="text-[12px] font-semibold text-slate-200 w-full">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <span className="w-[94%] mx-auto h-[40px] flex items-center justify-start">
+                        <p className="text-[12px] font-semibold text-slate-200 w-full text-start">Occupant engagement metrics: time spent, return visits.</p>
                     </span>
 
                     <span className="w-[94%] mx-auto flex-1 flex flex-col items-start justify-between border-b border-slate-200  relative ">
@@ -119,7 +119,7 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
                     </span>
 
                     <span className="w-[94%] mx-auto h-[50px] flex flex-row items-center justify-start ">
-                        <p className="text-[12px] font-semibold text-slate-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p className="text-[12px] font-semibold text-slate-200">Usability and perception: navigation, surveys, productivity.</p>
                     </span>
                 </div>
             </div>
