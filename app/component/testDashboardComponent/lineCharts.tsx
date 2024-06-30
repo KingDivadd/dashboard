@@ -980,3 +980,62 @@ export const ReturnVisitRateChart: React.FC = () => {
         </div>
     );
 };
+
+
+export const WayfindingEfficiencyTable: React.FC = () => {
+    const data = [
+        { destination: "Conference Room", averageTime: "2 min" },
+        { destination: "Restroom", averageTime: "1 min" },
+        { destination: "Cafeteria", averageTime: "3 min" },
+    ];
+
+    return (
+        <table className="w-full flex flex-col items-center justify-start text-white">
+            <thead className="w-full ">
+                <tr className="w-full flex items-center jusitify-between h-[50px] border-b border-slate-400">
+                    <th className="w-1/2 px-4  flex items-center justify-start">Destination</th>
+                    <th className="w-1/2 px-4 flex items-center justify-start">Average Time</th>
+                </tr>
+            </thead>
+
+            <tbody className="flex-1 w-full flex flex-col items-center justif-start">
+                {data.map((item, index) => (
+                    <tr key={index} className="w-full flex items-center justify-between h-[50px] border-b-slate-100 hover:bg-slate-500">
+                        <td className="w-1/2 px-4 ">{item.destination}</td>
+                        <td className="w-1/2 px-4 ">{item.averageTime}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    );
+};
+
+export const AverageTravelTimeTable: React.FC = () => {
+    const data = [
+        { from: "Entrance", to: "Conference Room", averageTime: "3 min" },
+        { from: "Entrance", to: "Restroom", averageTime: "1 min" },
+        { from: "Entrance", to: "Cafeteria", averageTime: "4 min" },
+    ];
+
+    return (
+        <table className="w-full flex flex-col items-center justify-start text-white">
+            <thead className="w-full ">
+                <tr className="w-full flex items-center jusitify-between h-[50px] border-b border-slate-400">
+                    <th className="w-1/3 px-4  flex items-center justify-start">From</th>
+                    <th className="w-1/3 px-4 flex items-center justify-start">To</th>
+                    <th className="w-1/3 px-4 flex items-center justify-start">Average Time</th>
+                </tr>
+            </thead>
+
+            <tbody className="flex-1 w-full flex flex-col items-center justif-start">
+                {data.map((item, index) => (
+                    <tr key={index} className="w-full flex items-center justify-between h-[50px] border-b-slate-100 hover:bg-slate-500">
+                        <td className="w-1/2 px-4 ">{item.from}</td>
+                        <td className="w-1/2 px-4 ">{item.to}</td>
+                        <td className="w-1/2 px-4 ">{item.averageTime}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    );
+};

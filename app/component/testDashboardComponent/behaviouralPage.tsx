@@ -2,7 +2,7 @@
 import { MainDashboardProps } from '../../../types/index'
 import React from 'react'
 import { FaCaretRight } from "react-icons/fa6";
-import EUILineChart, { WasteManagementLineChart, ReturnVisitRateChart } from './lineCharts'
+import EUILineChart, { WasteManagementLineChart, ReturnVisitRateChart, WayfindingEfficiencyTable, AverageTravelTimeTable } from './lineCharts'
 import EnergyEfficiencyCharts from './barChartPage'
 import {  ActiveAreaRatioChart, TimeSpentInAreasChart, WUIBarChart } from './barCharts';
 
@@ -42,6 +42,20 @@ const BehaviouralPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
                         <p className="text-lg font-semibold text-slate-700">Active Area Ratio</p>
                         <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
                             <ActiveAreaRatioChart />
+                        </span>
+                    </div>
+
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">Wayfinding Efficiency</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <WayfindingEfficiencyTable />
+                        </span>
+                    </div>
+
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">Average Travel Time Between Key Locations</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <AverageTravelTimeTable />
                         </span>
                     </div>
 
