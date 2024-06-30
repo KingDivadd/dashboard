@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaCaretRight } from "react-icons/fa6";
-import EUILineChart, { WasteManagementLineChart } from './lineCharts'
-import EnergyEfficiencyCharts from './barChartPage'
+import { WasteManagementLineChart } from './lineCharts'
 import { MainDashboardProps } from '../../../types/index'
 import { WUIBarChart } from './barCharts';
 
