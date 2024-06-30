@@ -412,3 +412,4 @@ export const AverageTravelTimeBarChart: React.FC = () => {
         </div>
     );
 };
+

@@ -596,7 +596,7 @@ export const ActiveAreaRatioTable: React.FC = () => {
 
             <tbody className="flex-1 w-full flex flex-col items-center justif-start">
                 {data.map((item, index) => (
-                    <tr key={index} className="w-full flex items-center justify-between h-[40px] border-b-slate-100 hover:bg-slate-500">
+                    <tr key={index} className="w-full flex items-center justify-between h-[50px] border-b-slate-100 hover:bg-slate-500">
                         <td className="w-1/4 px-4 ">{item.area}</td>
                         <td className="w-1/4 px-4 ">{item.designedCapacity}</td>
                         <td className="w-1/4 px-4 ">{item.numberOfPeople}</td>
@@ -628,16 +628,17 @@ export const WayfindingEfficiencyLineChart: React.FC = () => {
     }, []);
 
     const data: ChartData<'line'> = {
-        labels: ["Entrance", "Restrooms", "Common Areas"], // Example destinations
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], // Example labels for days
         datasets: [
             {
                 label: 'Wayfinding Efficiency',
-                data: [2, 3, 1.5], // Example data, replace with actual data
-                backgroundColor: "#F1F5F9", // Light red background for better visibility
-                borderColor: "#F1F5F9", // Green border color
+                data: [15, 14, 13, 12, 13, 14, 15], // Example data (replace with actual data)
+                backgroundColor: "#e2e8f0", // Light background for better visibility
+                borderColor: "#e2e8f0", // Blue border color
                 borderWidth: 2,
                 fill: true,
                 tension: 0.4,
+                pointRadius: 0, // Hide points
             },
         ],
     };
@@ -651,28 +652,34 @@ export const WayfindingEfficiencyLineChart: React.FC = () => {
             tooltip: {
                 callbacks: {
                     label: function (tooltipItem) {
-                        return `Wayfinding Efficiency: ${tooltipItem.raw} mins`;
+                        return `Time (mins): ${tooltipItem.raw}`;
                     }
                 }
             }
         },
         scales: {
             x: {
-                display: false, // Hide the x-axis
+                display: false, // Hide x-axis labels
+                grid: {
+                    display: false, // Hide x-axis grid lines
+                },
             },
             y: {
-                display: false, // Hide the y-axis
+                display: false, // Hide y-axis labels
                 beginAtZero: true,
-            }
+                grid: {
+                    display: false, // Hide y-axis grid lines
+                }
+            },
         },
         elements: {
-            point: {
-                radius: 0 // Hide points
-            }
+            line: {
+                tension: 0.4,
+            },
         },
         animation: {
-            duration: 0 // Disable animations for drawing lines
-        }
+            duration: 0, // Disable animations for drawing lines
+        },
     };
 
     return (
@@ -689,3 +696,119 @@ export const WayfindingEfficiencyLineChart: React.FC = () => {
         </div>
     );
 };
+
+
+export const UseabilityActiveAreaRatioTable: React.FC = () => {
+    const data = [
+        {title: 'Temperature Control', value: '80%'},
+        {title: 'Lighting Control', value: '85%'},
+        {title: 'Privacy Settings', value: '75%'},
+    ];
+
+    return (
+        <table className="w-full flex flex-col items-center justify-start text-white">
+            <thead className="w-full ">
+                <tr className="w-full flex items-center jusitify-between h-[50px] border-b border-slate-400">
+                    <th className="w-1/2 px-4 flex items-center justify-start">Aspect</th>
+                    <th className="w-1/2 px-4  flex items-center justify-start">Satisfaction Rate (%)</th>
+                </tr>
+            </thead>
+
+            <tbody className="flex-1 w-full flex flex-col items-center justif-start">
+                {data.map((item, index) => (
+                    <tr key={index} className="w-full flex items-center justify-between h-[50px] border-b-slate-100 hover:bg-slate-500">
+                        <td className="w-1/2 px-4 ">{item.title}</td>
+                        <td className="w-1/2 px-4 ">{item.value}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    );
+};
+
+export const UsabilityWayfindingEfficiencyLineChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const data: ChartData<'line'> = {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], // Example labels for days
+        datasets: [
+            {
+                label: 'Wayfinding Efficiency',
+                data: [15, 14, 13, 12, 13, 14, 15], // Example data (replace with actual data)
+                backgroundColor: "#F1F5F9", // Light red background for better visibility
+                borderColor: "#1D6CE2", // Blue border color
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+                pointRadius: 0, // Hide points
+            },
+        ],
+    };
+
+    const options: ChartOptions<'line'> = {
+        maintainAspectRatio: false,
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return `Time (mins): ${tooltipItem.raw}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                display: false, // Hide x-axis
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Time (mins)',
+                },
+                grid: {
+                    display: false,
+                }
+            },
+        },
+        elements: {
+            line: {
+                tension: 0.4,
+            },
+        },
+        animation: {
+            duration: 0, // Disable animations for drawing lines
+        },
+    };
+
+    return (
+        <div
+            style={{ width: "100%", height: "100%" }}
+            ref={chartRef}
+        >
+            <Line
+                data={data}
+                options={options}
+                width={chartDimensions.width}
+                height={chartDimensions.height}
+            />
+        </div>
+    );
+};
+
