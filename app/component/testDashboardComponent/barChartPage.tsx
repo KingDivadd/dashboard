@@ -192,3 +192,82 @@ export const LightingLevelsChart: React.FC<{ title: string; data: number[]; back
         </div>
     );
 };
+
+export const ParticulateMatterBarChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+    const dataPointsPM25 = [12, 15, 10, 14, 11, 13];
+    const dataPointsPM10 = [20, 22, 19, 21, 20, 23];
+
+    return (
+        <div
+            style={{ width: "100%", height: "100%" }}
+            ref={chartRef}
+        >
+            <Bar
+                data={{
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'PM 2.5',
+                            data: dataPointsPM25,
+                            backgroundColor: "#e2e8f0",
+                            borderColor: "#e2e8f0",
+                            borderWidth: 0,
+                        },
+                        {
+                            label: 'PM 10',
+                            data: dataPointsPM10,
+                            backgroundColor: "#94a3b8",
+                            borderColor: "#94a3b8",
+                            borderWidth: 0,
+                        },
+                    ],
+                }}
+                options={{
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    return `PM: ${tooltipItem.raw} µg/m³`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: false,
+                        },
+                        y: {
+                            display: false,
+                            beginAtZero: true,
+                        }
+                    },
+                }}
+                width={chartDimensions.width}
+                height={chartDimensions.height}
+            />
+        </div>
+    );
+};

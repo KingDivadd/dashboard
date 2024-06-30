@@ -294,3 +294,93 @@ export const HotWaterEnergyConsumptionChart: React.FC = () => {
     );
 };
 
+export const LightingLevelsBarChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const data: ChartData<'bar'> = {
+        labels: ["Office", "Conference Room", "Hallway", "Lobby", "Break Room"],
+        datasets: [
+            {
+                label: 'Lighting Levels (lux)',
+                data: [300, 500, 150, 400, 600], // Example lighting levels data
+                backgroundColor: "#e2e8f0",
+                borderColor: "#e2e8f0",
+                borderWidth: 0,
+            },
+        ],
+    };
+
+    const options: ChartOptions<'bar'> = {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return `Lighting: ${tooltipItem.raw} lux`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Area',
+                    color: '#6b7280', // gray-500
+                    font: {
+                        size: 14,
+                        weight: 'bold',
+                    },
+                },
+            },
+            y: {
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Lighting Levels (lux)',
+                    color: '#6b7280', // gray-500
+                    font: {
+                        size: 14,
+                        weight: 'bold',
+                    },
+                },
+                beginAtZero: true,
+            }
+        },
+    };
+
+    return (
+        <div
+            style={{ width: "100%", height: "100%" }}
+            ref={chartRef}
+        >
+            <Bar
+                data={data}
+                options={options}
+                width={chartDimensions.width}
+                height={chartDimensions.height}
+            />
+        </div>
+    );
+};
+
