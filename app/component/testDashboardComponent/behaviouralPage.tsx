@@ -2,9 +2,9 @@
 import { MainDashboardProps } from '../../../types/index'
 import React from 'react'
 import { FaCaretRight } from "react-icons/fa6";
-import EUILineChart, { WasteManagementLineChart } from './lineCharts'
+import EUILineChart, { WasteManagementLineChart, ReturnVisitRateChart } from './lineCharts'
 import EnergyEfficiencyCharts from './barChartPage'
-import { WUIBarChart } from './barCharts';
+import {  ActiveAreaRatioChart, TimeSpentInAreasChart, WUIBarChart } from './barCharts';
 
 const BehaviouralPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
     return (
@@ -24,9 +24,9 @@ const BehaviouralPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Water Use Intensity (WUI) Bar Chart</p>
+                        <p className="text-lg font-semibold text-slate-700">Time spent in different areas</p>
                         <span className='h-[350px] w-full  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
-                            <WUIBarChart />
+                            <TimeSpentInAreasChart />
                             <span className="w-full h-[3px] bg-red-200 border-b border-slate-100"></span>
                         </span>
                     </div>
@@ -34,7 +34,14 @@ const BehaviouralPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
                     <div className="chart-holder">
                         <p className="text-lg font-semibold text-slate-700">Waste Management Line Chart</p>
                         <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
-                            <WasteManagementLineChart />
+                            <ReturnVisitRateChart />
+                        </span>
+                    </div>
+
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">Active Area Ratio</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <ActiveAreaRatioChart />
                         </span>
                     </div>
 

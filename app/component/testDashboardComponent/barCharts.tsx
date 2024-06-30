@@ -522,3 +522,143 @@ export const PerceivedSafetySurveysChart: React.FC = () => {
         </div>
     );
 };
+
+export const TimeSpentInAreasChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const data: ChartData<'bar'> = {
+        labels: ["Lobby", "Work Areas", "Break Rooms"],
+        datasets: [
+            {
+                label: 'Time Spent (minutes)',
+                data: [120, 180, 45], // Example data
+                backgroundColor: "#e2e8f0",
+                borderColor: "#e2e8f0",
+                borderWidth: 0,
+            },
+        ],
+    };
+
+    const options: ChartOptions<'bar'> = {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return `Time: ${tooltipItem.raw} minutes`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                display: false,
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                display: false,
+                grid: {
+                    display: false,
+                },
+                beginAtZero: true,
+            }
+        },
+    };
+
+    return (
+        <div style={{ width: "100%", height: "100%" }} ref={chartRef}>
+            <Bar data={data} options={options} width={chartDimensions.width} height={chartDimensions.height} />
+        </div>
+    );
+};
+
+export const ActiveAreaRatioChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const data: ChartData<'bar'> = {
+        labels: ["Lobby", "Work Areas", "Break Rooms"],
+        datasets: [
+            {
+                label: 'Active Area Ratio',
+                data: [0.75, 0.90, 0.60], // Example data
+                backgroundColor: "#e2e8f0",
+                borderColor: "#e2e8f0",
+                borderWidth: 0,
+            },
+        ],
+    };
+
+    const options: ChartOptions<'bar'> = {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return `Ratio: ${tooltipItem.raw}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                display: false,
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                display: false,
+                grid: {
+                    display: false,
+                },
+                beginAtZero: true,
+            }
+        },
+    };
+
+    return (
+        <div style={{ width: "100%", height: "100%" }} ref={chartRef}>
+            <Bar data={data} options={options} width={chartDimensions.width} height={chartDimensions.height} />
+        </div>
+    );
+};

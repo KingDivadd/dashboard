@@ -899,3 +899,84 @@ export const PostOccupancySurveysChart: React.FC = () => {
         </div>
     );
 };
+
+
+export const ReturnVisitRateChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const data: ChartData<'line'> = {
+        labels: ["Lobby", "Work Areas", "Break Rooms"],
+        datasets: [
+            {
+                label: 'Return Visit Rate',
+                data: [75, 85, 65], // Example data
+                backgroundColor: "#F1F5F9",
+                borderColor: "#F1F5F9",
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+            },
+        ],
+    };
+
+    const options: ChartOptions<'line'> = {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return `Return Rate: ${tooltipItem.raw}%`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                display: false,
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                display: false,
+                grid: {
+                    display: false,
+                },
+                beginAtZero: true,
+            }
+        },
+        elements: {
+            point: {
+                radius: 0,
+            }
+        },
+        animation: {
+            duration: 0,
+        }
+    };
+
+    return (
+        <div style={{ width: "100%", height: "100%" }} ref={chartRef}>
+            <Line data={data} options={options} width={chartDimensions.width} height={chartDimensions.height} />
+        </div>
+    );
+};

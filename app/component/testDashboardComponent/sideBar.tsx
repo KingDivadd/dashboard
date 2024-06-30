@@ -88,7 +88,7 @@ const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:Sh
                             </span>
                         </span>
                         {/* below here will have the rows */}
-                        {selectedNav == 'building_performance' && <span className="w-full flex flex-col items-start justify-start gap-2 pl-[10px] ">
+                        {(selectedNav == 'building_performance' || (showSideBar && selectedNav == 'dashboard')) && <span className="w-full flex flex-col items-start justify-start gap-2 pl-[10px] ">
                             <span onClick={()=> selectNavBarItem('energy-efficiency')} className={activeNavItem == 'energy-efficiency' ? "active-side-bar-nav-item" : "side-bar-nav-item"}>
                                 <span className="w-full flex items-center justify-start gap-3">
                                     <MdOutlineEnergySavingsLeaf size={22} />
@@ -148,7 +148,7 @@ const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:Sh
                                 </span>
                             </span>
 
-                            <span onClick={()=> selectNavBarItem('behavioural')} className={activeNavItem == 'behavioral' ? "active-side-bar-nav-item" : "side-bar-nav-item"}>
+                            <span onClick={()=> selectNavBarItem('behavioural')} className={activeNavItem == 'behavioural' ? "active-side-bar-nav-item" : "side-bar-nav-item"}>
                                 <span className="w-full flex items-center justify-start gap-3">
                                     <MdTrackChanges size={20} />
                                     <p className="text-md">Behavioral KPIs</p>
