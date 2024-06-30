@@ -114,8 +114,6 @@ const EnergyEfficiencyCharts: React.FC = () => {
     );
 };
 
-
-
 export default EnergyEfficiencyCharts;
 
 export const LightingLevelsChart: React.FC<{ title: string; data: number[]; backgroundColor: string; borderColor: string }> = ({ title, data, backgroundColor, borderColor }) => {
@@ -261,6 +259,149 @@ export const ParticulateMatterBarChart: React.FC = () => {
                         },
                         y: {
                             display: false,
+                            beginAtZero: true,
+                        }
+                    },
+                }}
+                width={chartDimensions.width}
+                height={chartDimensions.height}
+            />
+        </div>
+    );
+};
+
+export const TimeSpentBarChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const labels = ["Lobby", "Work Areas", "Break Rooms"];
+    const dataPoints = [30, 45, 20]; // Example data, replace with actual data
+
+    return (
+        <div
+            style={{ width: "100%", height: "100%" }}
+            ref={chartRef}
+        >
+            <Bar
+                data={{
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Time Spent (Minutes)',
+                            data: dataPoints,
+                            backgroundColor: "#e2e8f0", // Corresponds to bg-slate-200
+                            borderColor: "#e2e8f0", // Make border same color to blend
+                            borderWidth: 0, // Remove border width
+                        },
+                    ],
+                }}
+                options={{
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    return `Time Spent: ${tooltipItem.raw} mins`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: false, // Hide the x-axis
+                        },
+                        y: {
+                            display: false, // Hide the y-axis
+                            beginAtZero: true,
+                        }
+                    },
+                }}
+                width={chartDimensions.width}
+                height={chartDimensions.height}
+            />
+        </div>
+    );
+};
+
+
+export const AverageTravelTimeBarChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const labels = ["Entrance to Restrooms", "Restrooms to Common Areas", "Entrance to Common Areas"];
+    const dataPoints = [1, 2, 1.5]; // Example data, replace with actual data
+
+    return (
+        <div
+            style={{ width: "100%", height: "100%" }}
+            ref={chartRef}
+        >
+            <Bar
+                data={{
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Average Travel Time (Minutes)',
+                            data: dataPoints,
+                            backgroundColor: "#e2e8f0", // Corresponds to bg-slate-200
+                            borderColor: "#e2e8f0", // Make border same color to blend
+                            borderWidth: 0, // Remove border width
+                        },
+                    ],
+                }}
+                options={{
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    return `Travel Time: ${tooltipItem.raw} mins`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: false, // Hide the x-axis
+                        },
+                        y: {
+                            display: false, // Hide the y-axis
                             beginAtZero: true,
                         }
                     },

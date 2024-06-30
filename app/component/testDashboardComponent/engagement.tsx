@@ -2,6 +2,8 @@
 import React from 'react'
 import {MainDashboardProps} from "../../../types/index"
 import { FaCaretRight } from "react-icons/fa6";
+import { AverageTravelTimeBarChart, TimeSpentBarChart } from './barChartPage';
+import { ActiveAreaRatioTable, ReturnVisitRateLineChart, WayfindingEfficiencyLineChart } from './lineCharts';
 
 const Engagement = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
     return (
@@ -21,17 +23,38 @@ const Engagement = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Water Use Intensity (WUI) Bar Chart</p>
+                        <p className="text-lg font-semibold text-slate-700">Time Spent in Different Areas</p>
                         <span className='h-[350px] w-full  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
-                            {/* <WUIBarChart /> */}
+                            <TimeSpentBarChart />
                             <span className="w-full h-[3px] bg-red-200 border-b border-slate-100"></span>
                         </span>
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Waste Management Line Chart</p>
+                        <p className="text-lg font-semibold text-slate-700">Return Visit Rate to Specific Spaces</p>
                         <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
-                            {/* <WasteManagementLineChart /> */}
+                            <ReturnVisitRateLineChart />
+                        </span>
+                    </div>
+
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">Active Area Ratio</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <ActiveAreaRatioTable />
+                        </span>
+                    </div>
+
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">Wayfinding Efficiency</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <WayfindingEfficiencyLineChart />
+                        </span>
+                    </div>
+
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">Average Travel Time Between Key Locations</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <AverageTravelTimeBarChart />
                         </span>
                     </div>
 
