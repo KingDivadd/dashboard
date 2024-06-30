@@ -342,28 +342,10 @@ export const LightingLevelsBarChart: React.FC = () => {
         },
         scales: {
             x: {
-                display: true,
-                title: {
-                    display: true,
-                    text: 'Area',
-                    color: '#6b7280', // gray-500
-                    font: {
-                        size: 14,
-                        weight: 'bold',
-                    },
-                },
+                display: false, // Hide the x-axis
             },
             y: {
-                display: true,
-                title: {
-                    display: true,
-                    text: 'Lighting Levels (lux)',
-                    color: '#6b7280', // gray-500
-                    font: {
-                        size: 14,
-                        weight: 'bold',
-                    },
-                },
+                display: false, // Hide the y-axis
                 beginAtZero: true,
             }
         },
@@ -384,3 +366,74 @@ export const LightingLevelsBarChart: React.FC = () => {
     );
 };
 
+
+export const WUIBarChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]; // Example labels for months
+    const dataPoints = [1200, 1000, 800, 950, 800, 700, 750, 700, 800, 740, 770, 800]; // Example water consumption data
+
+    return (
+        <div
+            style={{ width: "100%", height: "100%" }}
+            ref={chartRef}
+        >
+            <Bar
+                data={{
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Water Use Intensity (WUI)',
+                            data: dataPoints,
+                            backgroundColor: "#E2E8F0", // Corresponds to bg-slate-200
+                            borderColor: "#E2E8F0", // Make border same color to blend
+                            borderWidth: 0, // Remove border width
+                        },
+                    ],
+                }}
+                options={{
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    return `WUI: ${tooltipItem.raw} gallons/ft²`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: false, // Hide the x-axis
+                        },
+                        y: {
+                            display: false, // Hide the y-axis
+                            beginAtZero: true,
+                        }
+                    },
+                }}
+                width={chartDimensions.width}
+                height={chartDimensions.height}
+            />
+        </div>
+    );
+};
