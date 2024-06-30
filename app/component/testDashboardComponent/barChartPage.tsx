@@ -342,6 +342,7 @@ export const TimeSpentBarChart: React.FC = () => {
 };
 
 
+
 export const AverageTravelTimeBarChart: React.FC = () => {
     const chartRef = useRef<HTMLDivElement>(null);
     const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });

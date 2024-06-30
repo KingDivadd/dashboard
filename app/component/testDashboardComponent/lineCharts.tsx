@@ -812,3 +812,90 @@ export const UsabilityWayfindingEfficiencyLineChart: React.FC = () => {
     );
 };
 
+export const PostOccupancySurveysChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const data: ChartData<'line'> = {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // Example labels for months
+        datasets: [
+            {
+                label: 'Post-Occupancy Survey Results',
+                data: [4, 5, 4.5, 4.8, 4.6, 4.7, 4.9], // Example survey ratings (replace with actual data)
+                backgroundColor: "#E2E8F0", // bg-slate-200
+                borderColor: "#E2E8F0", // bg-slate-200
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+            },
+        ],
+    };
+
+    const options: ChartOptions<'line'> = {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return `Rating: ${tooltipItem.raw}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                display: false, // Hide the x-axis
+                grid: {
+                    display: false, // Hide the x-axis grid lines
+                },
+            },
+            y: {
+                display: false, // Hide the y-axis
+                grid: {
+                    display: false, // Hide the y-axis grid lines
+                },
+                beginAtZero: true,
+            }
+        },
+        elements: {
+            point: {
+                radius: 0 // Hide points
+            }
+        },
+        animation: {
+            duration: 0 // Disable animations for drawing lines
+        }
+    };
+
+    return (
+        <div
+            style={{ width: "100%", height: "100%" }}
+            ref={chartRef}
+        >
+            <Line
+                data={data}
+                options={options}
+                width={chartDimensions.width}
+                height={chartDimensions.height}
+            />
+        </div>
+    );
+};

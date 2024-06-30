@@ -437,3 +437,88 @@ export const WUIBarChart: React.FC = () => {
         </div>
     );
 };
+
+export const PerceivedSafetySurveysChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [chartDimensions, setChartDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const parentWidth = (chartRef.current?.parentNode as HTMLElement)?.clientWidth || 0;
+            const parentHeight = (chartRef.current?.parentNode as HTMLElement)?.clientHeight || 0;
+            setChartDimensions({ width: parentWidth, height: parentHeight });
+        };
+
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
+    const data: ChartData<'bar'> = {
+        labels: ["Entrance", "Office Area", "Meeting Rooms", "Restrooms"], // Example labels for areas
+        datasets: [
+            {
+                label: 'Perceived Safety Ratings',
+                data: [4.5, 4.8, 4.7, 4.6], // Example safety ratings (replace with actual data)
+                backgroundColor: "#F1F5F9", // Light background color
+                borderColor: "#1D6CE2", // Blue border color
+                borderWidth: 1,
+            },
+        ],
+    };
+
+    const options: ChartOptions<'bar'> = {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false,
+
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return `Rating: ${tooltipItem.raw}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    display: false, // Hide the x-axis grid lines
+                },
+                title: {
+                    display: false,
+                    text: 'Areas'
+                }
+            },
+            y: {
+                grid: {
+                    display: false, // Hide the x-axis grid lines
+                },
+                title: {
+                    display: false,
+                    text: 'Rating'
+                },
+                beginAtZero: true,
+            }
+        },
+    };
+
+    return (
+        <div
+            style={{ width: "100%", height: "100%" }}
+            ref={chartRef}
+        >
+            <Bar
+                data={data}
+                options={options}
+                width={chartDimensions.width}
+                height={chartDimensions.height}
+            />
+        </div>
+    );
+};

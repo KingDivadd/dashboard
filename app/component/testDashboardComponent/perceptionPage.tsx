@@ -2,8 +2,9 @@
 import { MainDashboardProps } from '../../../types/index'
 import React from 'react'
 import { FaCaretRight } from "react-icons/fa6";
-import EUILineChart, { UseabilityActiveAreaRatioTable, WayfindingEfficiencyLineChart } from './lineCharts'
+import EUILineChart, { PostOccupancySurveysChart, UseabilityActiveAreaRatioTable, WayfindingEfficiencyLineChart } from './lineCharts'
 import EnergyEfficiencyCharts, { AverageTravelTimeBarChart } from './barChartPage'
+import { PerceivedSafetySurveysChart } from './barCharts';
 
 const PerceptionPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
     return (
@@ -23,24 +24,17 @@ const PerceptionPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Wayfinding Efficiency</p>
+                        <p className="text-lg font-semibold text-slate-700">Post-Occupancy Surveys </p>
                         <span className='h-[350px] w-full  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
-                            <WayfindingEfficiencyLineChart />
+                            <PostOccupancySurveysChart />
                             <span className="w-full h-[3px] bg-red-200 border-b border-slate-100"></span>
                         </span>
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Average Travel Time Between Key Locations</p>
+                        <p className="text-lg font-semibold text-slate-700">Perceived Safety Surveys</p>
                         <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
-                            <AverageTravelTimeBarChart />
-                        </span>
-                    </div>
-
-                    <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Personalization Rate</p>
-                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
-                            <UseabilityActiveAreaRatioTable />
+                            <PerceivedSafetySurveysChart />
                         </span>
                     </div>
 
