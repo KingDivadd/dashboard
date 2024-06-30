@@ -3,6 +3,7 @@ import React from 'react'
 import { FaCaretRight } from "react-icons/fa6";
 import EUILineChart from './lineCharts'
 import EnergyEfficiencyCharts from './barChartPage'
+import { HVACEnergyConsumptionChart, LightingEnergyConsumptionChart, HotWaterEnergyConsumptionChart } from './barCharts';
 
 const EnergyEfficiencyPage = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
     return (
@@ -17,18 +18,39 @@ const EnergyEfficiencyPage = ({setShowSideBar, showSideBar}:MainDashboardProps) 
                         </div>}
 
                         <span className="w-full  h-[50px] rounded-[5px]  flex items-center justify-start">
-                            <p className="text-xl font-semibold text-violet-800">Energy Efficiency</p>
+                            <p className="text-xl font-semibold text-slate-700">Energy Efficiency</p>
                         </span>
                     </div>
 
                     <div className="chart-holder">
                         <p className="text-lg font-semibold text-slate-700">EUI Chart</p>
-                        <span className='h-[300px] w-full pb-[5px] border border-slate-500 rounded-[5px] '>
+                        <span className='h-[350px] w-full  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
                             <EUILineChart />
+                            <span className="w-full h-[3px] bg-red-200 border-b border-slate-100"></span>
                         </span>
                     </div>
 
-                    <EnergyEfficiencyCharts />
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">Lighting Energy Consumption</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <LightingEnergyConsumptionChart />
+                        </span>
+                    </div>
+
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">HVAC Energy Consumption</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <HVACEnergyConsumptionChart />
+                        </span>
+                    </div>
+
+                    <div className="chart-holder">
+                        <p className="text-lg font-semibold text-slate-700">Hot Water Energy Consumption</p>
+                        <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
+                            <HotWaterEnergyConsumptionChart />
+                        </span>
+                    </div>
+
 
                 </div>
 

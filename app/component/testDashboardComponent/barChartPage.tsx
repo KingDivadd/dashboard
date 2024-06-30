@@ -82,19 +82,19 @@ const ChartComponent: React.FC<{ title: string; data: number[]; backgroundColor:
 
 const EnergyEfficiencyCharts: React.FC = () => {
     return (
-        <div className="w-full flex flex-col items-start justif-start gap-[20px] px-[5px]">
-            <span className="h-[50px] w-full rounded-[5px] px-[10px] flex flex-row items-center justify-start bg-white">
-                <h2 className="text-slate-700 font-semibold text-lg" >Energy Efficiency Charts</h2>
+        <div className="w-full flex flex-col items-start justify-start gap-[20px] px-[5px]">
+            <span className="h-[50px] w-full rounded-[5px] px-[10px] flex flex-row items-center justify-start ">
+                <h2 className="text-slate-700 font-semibold text-lg">Energy Efficiency Charts</h2>
             </span>
-            <div className="w-full h-[300px] bg-white rounded-[5px] p-[5px] border border-slate-500 rounded-[5px] ">
+            <div className="w-full h-[300px]  rounded-[5px] p-[5px] border border-slate-500">
                 <ChartComponent 
                     title="Lighting Energy Consumption" 
                     data={[300, 250, 320, 280, 290, 310]} 
-                    backgroundColor="#03A9F4" 
+                    backgroundColor="#white" 
                     borderColor="#00BFFF" 
                 />
             </div>
-            <div className="w-full h-[300px] bg-white rounded-[5px] p-[5px]  border border-slate-500 rounded-[5px] ">
+            <div className="w-full h-[300px]  rounded-[5px] p-[5px] border border-slate-500">
                 <ChartComponent 
                     title="HVAC Energy Consumption" 
                     data={[450, 470, 460, 440, 450, 480]} 
@@ -102,7 +102,7 @@ const EnergyEfficiencyCharts: React.FC = () => {
                     borderColor="rgb(34 197 94)" 
                 />
             </div>
-            <div className="w-full h-[300px] bg-white rounded-[5px] p-[5px] border border-slate-500 rounded-[5px] ">
+            <div className="w-full h-[300px]  rounded-[5px] p-[5px] border border-slate-500">
                 <ChartComponent 
                     title="Hot Water Energy Consumption" 
                     data={[150, 160, 170, 155, 145, 165]} 
@@ -113,6 +113,8 @@ const EnergyEfficiencyCharts: React.FC = () => {
         </div>
     );
 };
+
+
 
 export default EnergyEfficiencyCharts;
 

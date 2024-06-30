@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef, useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
-import { Chart as ChartJS, LineElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement } from "chart.js";
+import { Chart as ChartJS, LineElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, ChartData, ChartOptions } from "chart.js";
 
 ChartJS.register(LineElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement);
 
@@ -24,64 +24,68 @@ const EUILineChart: React.FC = () => {
         };
     }, []);
 
+    const data: ChartData<'line'> = {
+        labels: [120, 100, 80, 95, 80, 70, 75, 70, 80,74, 77, 80,], // Example labels for months
+        datasets: [
+            {
+                label: 'Energy Use Intensity (EUI)',
+                data: [120, 100, 80, 95, 80, 70, 75, 70, 80,74, 77, 80,], // Example EUI data (replace with your actual data)
+                backgroundColor: "#F1F5F9", // Light red background for better visibility
+                borderColor: "#F1F5F9", // Green border color
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+            },
+        ],
+    };
+
+    const options: ChartOptions<'line'> = {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return `EUI: ${tooltipItem.raw}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                display: false, // Hide the x-axis
+            },
+            y: {
+                display: false, // Hide the y-axis
+                beginAtZero: true,
+            }
+        },
+        elements: {
+            point: {
+                radius: 0 // Hide points
+            }
+        },
+        animation: {
+            duration: 0 // Disable animations for drawing lines
+        }
+    };
+
     return (
         <div
             style={{ width: "100%", height: "100%" }}
             ref={chartRef}
         >
             <Line
-                data={{
-                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // Example labels for months
-                    datasets: [
-                        {
-                            label: 'Energy Use Intensity (EUI)',
-                            data: [120, 100, 80, 95, 80, 70, 75], // Example EUI data (replace with your actual data)
-                            backgroundColor: "rgba(29, 108, 226, 0.1)", // Adjust colors as needed
-                            borderColor: "#1D6CE2",
-                            borderWidth: 2,
-                            fill: true,
-                            tension: 0.4,
-                        },
-                    ],
-                }}
-                options={{
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: true,
-                            position: 'top',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(tooltipItem) {
-                                    return `EUI: ${tooltipItem.raw}`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Months'
-                            }
-                        },
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Energy Use Intensity (EUI)'
-                            },
-                            beginAtZero: true
-                        }
-                    }
-                }}
+                data={data}
+                options={options}
                 width={chartDimensions.width}
                 height={chartDimensions.height}
             />
         </div>
     );
 };
-
 export default EUILineChart;
 
 export const IAQLineChart: React.FC<{ title: string; labels: string[]; data: number[]; backgroundColor: string; borderColor: string }> = ({ title, labels, data, backgroundColor, borderColor }) => {
@@ -117,9 +121,9 @@ export const IAQLineChart: React.FC<{ title: string; labels: string[]; data: num
                             data: data,
                             backgroundColor: backgroundColor,
                             borderColor: borderColor,
-                            borderWidth: 2,
+                            borderWidth: 1,
                             fill: true,
-                            tension: 0.4,
+                            tension: 2,
                         },
                     ],
                 }}

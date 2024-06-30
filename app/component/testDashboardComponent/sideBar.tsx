@@ -64,7 +64,7 @@ const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:Sh
         <div className="w-full h-full flex flex-col justify-between items-start">
             <span className="w-full h-[60px] flex items-center justify-start px-3 relative">
                 <span className="side-bar" onClick={()=> setShowSideBar(false)}><FaCaretLeft size={21}  /> </span>
-                <p className="text-xl font-bold flex items-start justify-start"><p className="text-indigo-500">AD</p> AA</p>
+                <p className="text-xl font-bold flex items-start justify-start"><p className="text-slate-200">AD</p> AA</p>
             </span>
             <div className="w-full flex-1 flex flex-col items-start justify-between gap-2 ">
                 <div className="w-full min-h-[50px]  mt-[20px] px-3 pr-4 flex flex-col items-start justify-start gap-2 ">

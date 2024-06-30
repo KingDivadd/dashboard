@@ -26,7 +26,7 @@ export const Adaa = ()=>{
         <div className="w-[100px] h-full flex flex-col justify-between items-start">
             <p className="text-xl font-bold text-slate-600">ADAA</p>
             <span className="w-[90%] h-[4px] flex items-start justify-start bg-slate-200">
-                <span className="w-[80%] h-full bg-sky-300"></span>
+                <span className="w-[80%] h-full bg-slate-400"></span>
             </span>
         </div>
     )
@@ -74,7 +74,7 @@ export const BuilddMoangcailiy = ()=>{
         <div className="w-[130px] h-full flex flex-col justify-between items-start">
             <p className="text-sm font-semibold text-slate-600">Indoor Air Quality </p>
             <span className="w-full h-[4px] flex items-start justify-start bg-slate-200">
-                <span className="w-[60%] h-full bg-sky-500"></span>
+                <span className="w-[60%] h-full bg-slate-400"></span>
             </span>
         </div>
     )

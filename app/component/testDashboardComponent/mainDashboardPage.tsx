@@ -75,13 +75,16 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
                     <div className="w-full flex-1  rounded-t-[5px]">
                         {/* image wil be here */}
                         <div className="relative w-full h-full rounded-[3px] overflow-hidden">
-                            <Image 
-                                src="/proj img.webp" 
-                                alt="Authentication" 
-                                layout="fill" 
-                                objectFit="cover" 
-                            />
+                            <div className="absolute inset-0 filter grayscale-[70%] bg-black bg-opacity-20">
+                                <Image 
+                                    src="/one.jpg" 
+                                    alt="Authentication" 
+                                    layout="fill" 
+                                    objectFit="cover" 
+                                />
+                            </div>
                         </div>
+
                     </div>
                     <div className="w-full h-[55px] bg-gradient-to-r from-gray-400 via-slate-400 to-slate-500 flex flex-row items-center justify-center rounded-b-[5px] gap-4 py-[5px] px-[10px]">
                         <span className="w-full h-full flex flex-row items-center justify-between gap-1">
@@ -130,7 +133,7 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
             <div className="w-full main-dash-bottom-bar flex flex-row items-start justify-between gap-[50] rounded-[5px]  ">
                 {/* the left side */}
                 <div className="flex-1 h-full flex flex-col items-start justify-start  gap-[30px] ">
-                    <p className="text-[16px] font-semibold text-black">Company Over</p>
+                    <p className="text-[16px] font-semibold text-black">Building Overview</p>
                     <div className="w-full h-full flex flex-row items-center justify-between ">
                         <CompanyOverOne />
                         <CompanyOverTwo />
@@ -143,7 +146,7 @@ const MainDashboardPage = ({showSideBar, setShowSideBar}:MainDashboardProps) => 
 
                 {/* the right bottom side */}
                 <div className="w-[350px] h-full flex flex-col items-start justify-start  gap-[30px]">
-                    <p className="text-[16px] font-semibold text-black">Company Overnow</p>
+                    <p className="text-[16px] font-semibold text-black">Building Summary</p>
                     <div className="w-full flex-1 flex flex-row items-center justify-between ">
                         <CompanyOvernow />
                     </div>

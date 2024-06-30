@@ -156,10 +156,10 @@ export const DoughnutChartFour: React.FC = () => {
                     datasets: [{
                         data: [10, 35, 20, 35],
                         backgroundColor: [
-                            '#6B7280',
-                            '#6B7280',
+                            '#475569',
+                            '#475569',
                             '#FFFFFF',
-                            '#6B7280',
+                            '#475569',
                         ],
                         borderWidth: 0, // Remove the border
                         hoverOffset: 4
@@ -214,10 +214,10 @@ export const DoughnutChartFive: React.FC = () => {
                     datasets: [{
                         data: [10, 25, 40, 25],
                         backgroundColor: [
-                            '#87CEEB',
-                            '#87CEEB',
-                            '#FFFFFF',
-                            '#87CEEB',
+                            '#475569',
+                            '#475569',
+                            '#E5E7EB',
+                            '#475569',
                         ],
                         borderWidth: 0, // Remove the border
                         hoverOffset: 4
