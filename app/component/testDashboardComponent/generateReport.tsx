@@ -14,7 +14,7 @@ const GenerateReport = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
 
                 <div className="w-full flex flex-col items-start justify-start gap-[20px] overflow-y-auto  ">
                     {/* the header */}
-                    <div className="w-full  bg-red-20 flex flex-row items-center justify-start gap-[20px] rounded-[5px] px-[5px]">
+                    <div className="w-full  bg-red-20 flex flex-row items-center justify-start gap-[20px] rounded-[5px] px-[5px] ">
                         {!showSideBar && 
                         <div className="h-[40px] w-[40px] flex items-center justify-center rounded-[5px] bg-slate-500 text-slate-100 cursor-pointer hover:bg-slate-600 hover:text-slate-200 " onClick={()=> setShowSideBar(true)} >
                             <FaCaretRight size={25}  />
@@ -27,7 +27,7 @@ const GenerateReport = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
                             </span>
                         
                     </div>
-                    <span className="w-full  pl-[5px] rounded-[5px]  flex items-center justify-between gap-[5px] px-[5px] ">
+                    <span className="w-full  pl-[5px] pb-[20px] rounded-[5px]  flex items-center justify-between gap-[5px] px-[5px] border-b border-slate-300 ">
                         <p className="text-lg font-semibold text-slate-700">Building Management Service Company</p>
                         <p className="text-lg font-semibold text-slate-700">July 2, 2024</p>
                     </span>

@@ -24,7 +24,7 @@ const ComfortAndHealthPage = ({setShowSideBar, showSideBar}:MainDashboardProps) 
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">CO2 Levels Line Chart</p>
+                        <p className="text-lg font-semibold text-slate-700">CO2 Levels </p>
                         <span className='h-[350px] w-full  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
                             <CO2LevelsLineChart />
                             <span className="w-full h-[3px] bg-red-200 border-b border-slate-100"></span>
@@ -32,28 +32,28 @@ const ComfortAndHealthPage = ({setShowSideBar, showSideBar}:MainDashboardProps) 
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Temperature Line Chart</p>
+                        <p className="text-lg font-semibold text-slate-700">Temperature </p>
                         <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
                             <TemperatureLineChart />
                         </span>
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Humidity Line Chart</p>
+                        <p className="text-lg font-semibold text-slate-700">Humidity </p>
                         <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
                             <HumidityLineChart />
                         </span>
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">PM 2.5 and PM 10 Bar Chart</p>
+                        <p className="text-lg font-semibold text-slate-700">PM 2.5 and PM 10</p>
                         <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
                             <ParticulateMatterBarChart />
                         </span>
                     </div>
 
                     <div className="chart-holder">
-                        <p className="text-lg font-semibold text-slate-700">Lighting Levels Table</p>
+                        <p className="text-lg font-semibold text-slate-700">Lighting Levels</p>
                         <span className=' w-full h-[350px]  bg-slate-600 border border-slate-500 rounded-[5px] p-[10px] '>
                             <LightingLevelsBarChart />
                         </span>
