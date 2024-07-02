@@ -14,6 +14,12 @@ import { FaHandshakeAngle } from "react-icons/fa6";
 import { MdTouchApp } from "react-icons/md";
 import { MdFeedback } from 'react-icons/md';
 import { MdTrackChanges } from "react-icons/md";
+import { FaArrowsAlt } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa6";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { BiSolidReport } from "react-icons/bi";
+import { MdNoteAlt } from "react-icons/md";
+import { PiCallBell } from "react-icons/pi";
 
 
 const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:ShowSideBarProps) => {
@@ -88,7 +94,7 @@ const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:Sh
                             </span>
                         </span>
                         {/* below here will have the rows */}
-                        {(selectedNav == 'building_performance' || (showSideBar && selectedNav == 'dashboard')) && <span className="w-full flex flex-col items-start justify-start gap-2 pl-[10px] ">
+                        {selectedNav == 'building_performance'  && <span className="w-full flex flex-col items-start justify-start gap-2 pl-[10px] ">
                             <span onClick={()=> selectNavBarItem('energy-efficiency')} className={activeNavItem == 'energy-efficiency' ? "active-side-bar-nav-item" : "side-bar-nav-item"}>
                                 <span className="w-full flex items-center justify-start gap-3">
                                     <MdOutlineEnergySavingsLeaf size={22} />
@@ -137,7 +143,7 @@ const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:Sh
                             <span onClick={()=> selectNavBarItem('useability')} className={activeNavItem == 'useability' ? "active-side-bar-nav-item":"side-bar-nav-item"}>
                                 <span className="w-full flex items-center justify-start gap-3">
                                     <MdTouchApp size={22} />
-                                    <p className="text-md">Useability KPIs</p>
+                                    <p className="text-md">Usability KPIs</p>
                                 </span>
                             </span>
 
@@ -154,7 +160,49 @@ const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:Sh
                                     <p className="text-md">Behavioral KPIs</p>
                                 </span>
                             </span>
+                            <span onClick={()=> selectNavBarItem('touchpoint-map')} className={activeNavItem == 'touchpoint-map' ? "active-side-bar-nav-item" : "side-bar-nav-item"}>
+                                <span className="w-full flex items-center justify-start gap-3">
+                                    <FaMapMarkedAlt size={20} />
+                                    <p className="text-md">Touchpoint Map</p>
+                                </span>
+                            </span>
+                            <span onClick={()=> selectNavBarItem('occupancy-map')} className={activeNavItem == 'occupancy-map' ? "active-side-bar-nav-item" : "side-bar-nav-item"}>
+                                <span className="w-full flex items-center justify-start gap-3">
+                                    <FaUsers size={20} />
+                                    <p className="text-md">Occupancy Map</p>
+                                </span>
+                            </span>
+                            <span onClick={()=> selectNavBarItem('circulation-map')} className={activeNavItem == 'circulation-map' ? "active-side-bar-nav-item" : "side-bar-nav-item"}>
+                                <span className="w-full flex items-center justify-start gap-3">
+                                    <FaArrowsAlt size={20} />
+                                    <p className="text-md">Circulation Map</p>
+                                </span>
+                            </span>
                         </span>}
+                    </span>
+
+                    <span className={selectedNav == 'report_summary' ? "active-side-bar-nav" : "side-bar-nav"} onClick={()=> selectNavBar('report_summary')} >
+                        <span className="w-full flex items-center justify-start gap-3">
+                            <MdNoteAlt  size={23} />
+                            <p className="text-md">Report Summary</p>
+                        </span>
+                        
+                    </span>
+
+                    <span className={selectedNav == 'generate_report' ? "active-side-bar-nav" : "side-bar-nav"} onClick={()=> selectNavBar('generate_report')} >
+                        <span className="w-full flex items-center justify-start gap-3">
+                            <BiSolidReport  size={23} />
+                            <p className="text-md">Generate Report</p>
+                        </span>
+                        
+                    </span>
+
+                    <span className={selectedNav == 'contact' ? "active-side-bar-nav" : "side-bar-nav"} onClick={()=> selectNavBar('contact')} >
+                        <span className="w-full flex items-center justify-start gap-3">
+                            <PiCallBell  size={23} />
+                            <p className="text-md">Contact ADAA</p>
+                        </span>
+                        
                     </span>
 
                 </div>

@@ -10,6 +10,12 @@ import Engagement from './engagement'
 import PerceptionPage from './perceptionPage'
 import BehaviouralPage from './behaviouralPage'
 import UseabilityPage from './useabilityPage'
+import TouchpointMap from './touchpointMap'
+import OccupancyMap from './occupancyMap'
+import CirculationMap from './circulationMap'
+import ContactAdaa from './contactAdaa'
+import ReportSummary from './reportSummary'
+import GenerateReport from './generateReport'
 
 
 
@@ -46,6 +52,18 @@ const MainDashboard = () => {
                 {selectedPage == 'perception' && <PerceptionPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
                 {selectedPage == 'behavioural' && <BehaviouralPage showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+                
+                {selectedPage == 'touchpoint-map' && <TouchpointMap showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'occupancy-map' && <OccupancyMap showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'circulation-map' && <CirculationMap showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'generate_report' && <GenerateReport showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'report_summary' && <ReportSummary showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
+
+                {selectedPage == 'contact' && <ContactAdaa showSideBar={showSideBar} setShowSideBar={setShowSideBar}  />}
 
             </div>
         </div>
