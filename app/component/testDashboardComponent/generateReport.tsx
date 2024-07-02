@@ -14,24 +14,23 @@ const GenerateReport = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
 
                 <div className="w-full flex flex-col items-start justify-start gap-[20px] overflow-y-auto  ">
                     {/* the header */}
-                    <div className="w-full  bg-red-20 flex flex-row items-center justify-start gap-[20px] rounded-[5px] pl-[5px]">
+                    <div className="w-full  bg-red-20 flex flex-row items-center justify-start gap-[20px] rounded-[5px] px-[5px]">
                         {!showSideBar && 
                         <div className="h-[40px] w-[40px] flex items-center justify-center rounded-[5px] bg-slate-500 text-slate-100 cursor-pointer hover:bg-slate-600 hover:text-slate-200 " onClick={()=> setShowSideBar(true)} >
                             <FaCaretRight size={25}  />
                         </div>}
 
-                        <span className="w-full  h-[85px] rounded-[5px]  flex flex-col items-strt justify-center gap-[5px]">
-                            <p className="text-xl font-semibold text-slate-700">Post-Occupancy Evaluation Report</p>
-                            <p className="text-sm font-semibold text-slate-700">Building Management Service Company</p>
-                            <span className="w-full h-[40px] flex items-center justify-between">
-                                <p className="text-lg font-semibold text-slate-700">July 2, 2024</p>
-
-                                <button className="h-full w-[100px] hover:bg-slate-6000px] rounded-[5px] flex items-center justify-center bg-slate-600 text-white hover:bg-slate-500 text-sm ">Download</button>
+                            <span className="w-full flex items-center justify-between">
+                                <p className="text-xl font-semibold text-slate-700">Post-Occupancy Evaluation Report</p>
+                                <button className="h-[40px]  w-[100px] hover:bg-slate-6000px] rounded-[5px] flex items-center justify-center bg-slate-600 text-white hover:bg-slate-500 text-sm ">Download</button>
 
                             </span>
-                        </span>
                         
                     </div>
+                    <span className="w-full  pl-[5px] rounded-[5px]  flex items-center justify-between gap-[5px] px-[5px] ">
+                        <p className="text-lg font-semibold text-slate-700">Building Management Service Company</p>
+                        <p className="text-lg font-semibold text-slate-700">July 2, 2024</p>
+                    </span>
 
                     <div className="w-full h-full flex items-center justify-center rounded-[5px]  p-[5px] overflow-y-auto">
 

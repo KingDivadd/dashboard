@@ -24,19 +24,38 @@ const ReportSummary = ({setShowSideBar, showSideBar}:MainDashboardProps) => {
                         </span>
                     </div>
 
-                    <div className="w-full h-full flex items-center justify-center rounded-[5px]  bg-slate-500 p-[5px]">
+                    <div className="w-full h-full flex items-center justify-center rounded-[5px]  bg-slate-500 p-[5px] overflow-y-auto ">
 
-                    <div className="w-full h-full  flex items-center justify-center  relative rounded-[5px]">
-                        <div className="h-full w-full absolute inset-0 filter rounded-[5px]  ">
-                            <Image 
-                                src="/touchpoint .png" 
-                                alt="Touch Point" 
-                                layout="fill" 
-                                objectFit="cover" 
-                                className='rounded-[5px]'
-                            />
+                        <div className="w-full h-full  flex items-center justify-center  relative rounded-[5px]">
+                            1. Building Performance    
+                            Energy Efficiency                               |
+|   - Energy Use Intensity (EUI)                    |
+|   - Metered System Performance                    |
+| - Occupant Comfort & Health                       |
+|   - Indoor Air Quality (IAQ)                      |
+|   - Lighting Levels                               |
+| - Sustainability                                  |
+|   - Water Use Intensity (WUI)                     |
+|   - Waste Management  
+2Building Behavior                                 
+
+Engagement KPIs                                 |
+|   - Time Spent in Different Areas                 |
+|   - Return Visit Rate                             |
+|   - Active Area Ratio                             |
+| - Usability KPIs                                  |
+|   - Wayfinding Efficiency                         |
+|   - Average Travel Time Between Key Locations     |
+|   - Personalization Rate                          |
+| - Perception KPIs                                 |
+|   - Post-Occupancy Surveys                        |
+|   - Net Promoter Score (NPS)                      |
+|   - Perceived Safety Surveys                      |
+|   - Employee Survey Data on Productivity & Well-being|
+| - Behavioral KPIs                                 |
+|   - Collaboration Space Utilization Rate          |
+|   - Noise Complaint Rate  
                         </div>
-                    </div>
 
                     </div>
 

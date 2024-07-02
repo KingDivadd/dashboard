@@ -29,14 +29,14 @@ const SideBar = ({setShowSideBar, showSideBar, selectedPage, setSelectedPage}:Sh
     useEffect(() => {
         const side_bar = sessionStorage.getItem('side_nav')
         const side_bar_item = sessionStorage.getItem('side_nav_item')
-        if (side_bar == null || !side_bar || !['dashboard', 'building_behaviour', 'building_performance'].includes(side_bar)){
+        if (side_bar == null || !side_bar || !['dashboard', 'building_behaviour', 'building_performance', 'contact', 'generate_report', 'report_summary'].includes(side_bar)){
             setSelectedNav('dashboard')
         }else{
             setSelectedNav(side_bar)
         }
         if (side_bar == 'building_behaviour'){
             setSelectedNav('building_behaviour')
-            if (!side_bar_item || side_bar_item == null || !['engagement', 'useability', 'perception', 'behavioral'].includes(side_bar_item)){
+            if (!side_bar_item || side_bar_item == null || !['engagement', 'useability', 'perception', 'behavioral', 'circulation-map', 'occupancy-map', 'touchpoint-map'].includes(side_bar_item)){
                 setActiveNavItem('engagement')
             }else{
                 setActiveNavItem(side_bar_item)
